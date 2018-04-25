@@ -19,7 +19,7 @@ class HeaderPage extends Component {
 	return (
 		<div className="">
 			
-				<div className="DevenirConseiller">
+				<div className="DevenirConseillerHeader">
 					<p>
 					<Link to="/DevenirConseiller" >
 						<Conseillers />

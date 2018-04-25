@@ -288,6 +288,7 @@ class ListeMessages extends Component {
 	        				<div className="ageAuthor">
 	        				{age} ans
 	        				</div>
+	        				<div className="dateMessage">{this.props.nbrreponse} {this.reponse()} </div>
 	         				<div className="dateMessage">
 		         			{	this.state.nbrSeconde<60 ? "Il y a 30 secondes": 
 		         				this.state.nbrMinutes<2 ? "Il y a " + this.state.nbrMinutes +" minute": 
@@ -299,19 +300,8 @@ class ListeMessages extends Component {
 								"Il y a " + this.state.nbrMois +" mois" 
 	         				}
 	         				</div>
-	         				<div className="dateMessage">{this.props.nbrreponse} {this.reponse()} </div>
-	          				<div className="repondreMessage">
-	          					<Link to={'/singleMessage/' + this.props.message._id} >
-	          						<Button  size="tiny" color="green">
-	          							Aider
-	          						</Button>
-	          					</Link>
-	          				</div>
-							<div className="Signaler" >
-								<Button basic size="tiny" disabled={this.state.disabled} color='red' onClick={this.signaler.bind(this)}>
-									Signaler
-								</Button>
-							</div>
+	         				
+	          				<br />
 							<p className="categorie">
 							
 							{ this.state.premierAmour ? 
@@ -430,6 +420,31 @@ class ListeMessages extends Component {
 							<span className="espace">{this.state.autre} </span>
  							: "" }				
 							</p>
+							
+							<br />
+							
+							<div className="repondreMessage">
+	          					<Link to={'/singleMessage/' + this.props.message._id} >
+	          						<Button  size="tiny" color="green">
+	          							Aider
+	          						</Button>
+	          					</Link>
+	          				</div>
+							
+							<div className="Signaler" >
+								<Button basic size="tiny" disabled={this.state.disabled} color='red' onClick={this.signaler.bind(this)}>
+									Signaler
+								</Button>
+							</div>
+
+							<div className="Signaler" >
+								<Button basic size="tiny" color='blue'>
+									<Link to={'/Chat/' + this.props.message.post_author_id }>
+									Message privé
+									</Link>
+								</Button>
+							</div>
+
 	      				</Comment.Content>
 	    			</Comment>
 	  			</Segment>

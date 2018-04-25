@@ -36,7 +36,7 @@ header {
 .containerSite{
 	background-color: #e9ebee;
 	display: block;
-	min-height: 1750px;
+	min-height: 17500px;
 
 }
 
@@ -173,7 +173,7 @@ header {
 	position: fixed;
     top: 0px;
     width: 100%;
-    max-height: 60px;
+    height: 30px;
 }
 
 .containerHeader{
@@ -237,6 +237,7 @@ header {
 
 .pusher{
 	display: inline-block;
+	margin-top: -3px;
 }
 
 .ListeSideBar{
@@ -359,6 +360,7 @@ header {
 .dateMessage{
 	display: inline-block;
 	margin-left: 10px;
+	float: right;
 }
 
 .nameAuthor{
@@ -376,7 +378,8 @@ header {
 
 .repondreMessage{
 	float: right;
-	margin-top: -10px;
+	/*margin-top: -10px;*/
+	display: inline-block;
 }
 
 .signaler{
@@ -502,10 +505,11 @@ header {
 }
 
 .NotifCircle{
-	float: right;
-	background-color: teal;
-	padding: 3px;
-	border-radius: 5px;
+    background-color: teal;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-left: -5px;
 }
 
 .Blockcategorie{
@@ -541,11 +545,13 @@ header {
 }
 
 .DevenirConseiller{
-	float: right;
-	margin-left: 20px;
-	margin-top: 0px;
+	margin-top: -2px;
 	color: white;
 	font-size: 20px;
+	width: 25%;
+	display: inline-block;
+	text-align: center;
+	margin-top: 5px;
 }
 
 .DevenirConseiller a{
@@ -553,6 +559,23 @@ header {
 }
 
 .DevenirConseiller a:hover{
+	color: white;
+}
+
+.DevenirConseillerHeader{
+	margin-right: 20px;
+	margin-top: -2px;
+	color: white;
+	font-size: 20px;
+	float: right;
+	margin-right: 10px;
+}
+
+.DevenirConseillerHeader a{
+	color: white;
+}
+
+.DevenirConseillerHeader a:hover{
 	color: white;
 }
 
@@ -1544,7 +1567,6 @@ header {
 	margin-right: 30px;
 	color: white;
 	font-size: 20px;
-	margin-top: -20px;
 	float: right;
 }
 
@@ -1569,9 +1591,10 @@ header {
 }
 
 .Signaler{
-	float: right;
+	/*float: right;
 	margin-top: -10px;
-	margin-right: 20px;
+	margin-right: 20px;*/
+	display: inline-block;
 }
 
 .visibleMessage{
@@ -1606,6 +1629,14 @@ header {
 
 .goBackForget{
 
+}
+
+.nameMobile{
+	color: white;
+	font-size: 16px;
+	position: fixed;
+	left: 50px;
+	margin-top: -2px;
 }
 
 @media only screen and (max-width: 1800px) {
