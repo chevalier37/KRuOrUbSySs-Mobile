@@ -1,0 +1,1775 @@
+html, body{
+   background-color: #e9ebee;
+   /*overflow: hidden;*/
+   height: 100%;
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+}
+
+.container{
+	min-height: 600px;
+	width: 100%;
+}
+
+
+.containerIMG {
+    background-color: #e9ebee;
+    /* width: 900px; */
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+
+
+
+.containerSupIMG{
+	background-color: #e9ebee;
+	display: block;
+	min-height: 750px;
+
+}
+
+.containerSite{
+	background-color: #e9ebee;
+	display: block;
+	min-height: 1750px;
+
+}
+
+
+.headerSite{
+	height: 60px;
+    width: 250px;
+    background-color: #e9ebee;
+    background-image: linear-gradient(#8e0505, #b90202 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headerPage{
+	width: 100%;
+	background-color: #e9ebee;
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+}
+
+.FooterPage{
+	width: 100%;
+	background-color: #e9ebee;
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+	position: fixed;
+	bottom: 0px;
+	height: 30px;
+}
+
+.formLogin{
+	float: right;
+	padding-top: 8px;
+}
+
+.forgetPassword{
+	margin-top: 10px;
+	font-size: 16px;
+	color: black;
+	margin-left: 5px;
+	margin-bottom: 25px;
+}
+
+.forgetPassword a{
+	color: black;
+}
+
+.forgetPassword a:hover{
+	color: black;
+}
+
+.logo{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.logoPage{
+	width: 45px;
+	height: 45px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.titreKURBYS{
+	float: left;
+	color: white;
+	font-size: 25px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.titreKURBYSpage{
+	float: left;
+	color: white;
+	font-size: 25px;
+	margin-left: 10px;
+	margin-top: 15px;
+}
+
+.titreKURBYSpage a {
+	color: white;
+}
+
+.titreKURBYSpage a:hover {
+	color: white;
+}
+
+.FormSubscribe{
+    margin-top: 90px;
+    z-index: 10;
+}
+
+.footer{
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	
+}
+
+.ContainerFormSubcribe{
+	/*background-color: #278aaf94;*/
+    margin-top: -20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+.slogan{
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+	width: 410px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.containerFooter{
+	display: block;
+}
+
+.footerSlogan{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.containerSupHeader{
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+	display: block;
+	position: fixed;
+    top: 0px;
+    width: 100%;
+    max-height: 60px;
+}
+
+.containerHeader{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sincrire{
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 5px;
+}
+
+.loginText{
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 5px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.gratuit{
+	font-size: 18px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+
+.consigneSite{
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.FlagEspace{
+	width: 5px;
+	display: inline-block;
+}
+
+.ContainerDrapeaux{
+	font-size: 15px;
+	margin-top: 20px;
+	
+}
+
+.Drapeaux{
+	height: 200px;
+	margin-top: 10px;
+}
+
+.buttonPush{
+	float: right;
+	margin-top: 5px;
+}
+
+.buttonPushMobile{
+	float: left;
+	margin-left: 10px;
+	color: white;
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+.pusher{
+	display: inline-block;
+}
+
+.ListeSideBar{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	background-color: #f5f5f5;
+	margin-top: 30px;
+}
+
+.ui.left.sidebar, .ui.right.sidebar {
+    width: auto;
+}
+
+.SidebarUI{
+	background-color: #f5f5f5;
+}
+
+.ListRight{
+	width: 100px;
+}
+
+.ListItem{
+	
+	color: black;
+	font-weight: bold;
+}
+
+.ListItem:hover{
+	
+	color: #4183c4;
+}
+
+
+.MenuLeft {
+    margin-top: 55px;
+    position: fixed;
+    margin-left: 20px;
+    
+}
+
+.MenuLeftLastConseiller{
+
+}
+
+.test{
+	height: 500px;
+}
+
+.HeaderLastConseiller{
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+    width: 208px;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    font-size: 16px;
+    position: fixed;
+    margin-bottom: 10px;
+    display: block;
+    z-index: 2;
+
+}
+
+.HeaderMenu{
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+    width: 208px;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    position: fixed;
+    z-index: 10;
+}
+
+.MainContent {
+    margin-top: 40px;
+    min-height: 800px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.MainModifierConseiller{
+	float: right;
+    min-width: 700px;
+    margin-top: 55px;
+    min-height: 800px;
+    font-size: 14px;
+    margin-left: 240px;
+    margin-right: 20px;
+}
+
+
+.Accordeonvisible .ui.styled.accordion {
+    width: 100%;
+}
+
+.Checkbox{
+	margin-right: 15px;
+}
+
+.ListeMessages{
+	margin-top: 15px;
+}
+
+.ButtonTrier{
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.ContentQuestion{
+	margin-top: 0px;
+	font-size: 16px;
+}
+
+.dateMessage{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.nameAuthor{
+	display: inline-block;
+}
+
+.NameAuthorMessage{
+	display: inline-block;
+}
+
+.ListeMessagesSingle{
+	margin-top: 3px;
+}
+	
+
+.repondreMessage{
+	float: right;
+	margin-top: -10px;
+}
+
+.signaler{
+	float: right;
+	margin-top: 0px;
+	margin-right: 20px;
+	color: red;
+}
+
+.categorie{
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.pseudo{
+	color: white;
+	margin-right: 20px;
+	height: 100%;
+}
+
+.notif{
+	color: white;
+	margin-right: 10px;
+	height: 100%;
+
+}
+
+.DropdownMenuNotif.ui.dropdown .menu{
+	position: absolute;
+    top: 45px;
+    left: -390px;
+    word-wrap: break-word; 
+}
+
+.DropdownNotif{
+	margin-top: 40px;
+	width: 400px;
+	height: 400px;
+	overflow-y: scroll;
+	padding-right: 17px;
+}
+
+.DropdownMenu.ui.dropdown .menu{
+	position: absolute;
+	top:35px;
+}
+
+.DropdownMenu a{
+	color: black;
+}
+
+.DropdownMenu a:hover{
+	color: black;
+}
+
+.menuIcon{
+	margin-left: 7px;
+	display: inline-block;
+}
+
+.colorIcon{
+	color: #ad4444;
+	display: inline-block;
+	margin-bottom: -10px;
+}
+
+.colorIconBlue{
+	color: #5c5cff;
+	display: inline-block;
+	margin-bottom: -10px;
+}
+
+.colorIconBlack{
+	color: black;
+	display: inline-block;
+	margin-bottom: -10px;
+}
+
+.colorIconVert{
+	color: green;
+	display: inline-block;
+	margin-bottom: -10px;
+}
+
+
+
+.ItemNotif{
+	background-color: red;
+}
+
+.AllNotif{
+	background-color: #e6e6e6;
+	position: fixed;
+	bottom: 0px;
+}
+
+.ToutesNotif{
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.StopScrollBody{
+	overflow: hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.ui.dropdown>.dropdown.icon{
+	display: none;
+}
+
+.menu {
+	position: relative;
+    margin-top: 20px;
+    display: none;
+}
+
+.ContainerNotifCircle{
+	display: inline-block;
+}
+
+.NotifCircle{
+	float: right;
+	background-color: teal;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.Blockcategorie{
+	margin-top: 20px;
+}
+
+.visibleCategorie{
+	display: block;
+	margin-top: 20px;
+}
+
+.visiblenote{
+	display: block;
+}
+
+.visibleTitre{
+	color: black;
+	font-weight: bold;
+}
+
+.visibleTitre a{
+	color: black;
+	font-weight: bold;
+}
+
+.visibleTitre a:hover{
+	color: black;
+	font-weight: bold;
+}
+
+.cacherCategorie{
+	display: none;
+}
+
+.DevenirConseiller{
+	float: right;
+	margin-left: 20px;
+	margin-top: 0px;
+	color: white;
+	font-size: 20px;
+}
+
+.DevenirConseiller a{
+	color: white;
+}
+
+.DevenirConseiller a:hover{
+	color: white;
+}
+
+.containerChat{
+	background-color: #e9ebee;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.containerContactChat{
+	display: block;
+}
+
+.containerDiscussion{
+	display: block;
+	height: 100vh;
+	position: fixed;
+    right: 750px;
+}
+
+.MainContentChat{
+    height: 100%;
+    margin-left: 210px;
+    margin-top: 50px;
+    position: fixed;
+    left: 0px;
+}
+
+.ChatContactLeft{
+	float: left;
+    /* width: 150px; */
+    height: 500px;
+    margin-top: 50px;
+    overflow: auto;
+}
+
+.containerSiteChat{
+	background-color: #e9ebee;
+	display: block;
+	min-width: 900px;
+
+}
+
+.ValideChat{
+	position: fixed;
+	bottom: 0px;
+	background-color: yellow;
+	margin-left: 200px;
+	height: 150px;
+
+}
+
+.ValideChatTest{
+	/*position: fixed;
+	bottom: 0px;*/
+	
+	margin-bottom:200px;
+	margin-left: 200px;
+	background-color: red;
+	min-height: 200px;
+	height:70vh;
+}
+
+.ContentDiscussion{
+	background-color: white;
+    background-color: white;
+    height: 100%;
+    padding-left: 10px;
+    overflow: auto;
+    position: fixed;
+    padding-right: 4%;
+    width: 85%;
+    padding-bottom: 350px;
+    
+}
+
+.messageRight{
+	float: right;
+}
+
+.errorConnexion{
+	color: blue;
+}
+
+.forgetPassword a{
+	color: black;
+}
+
+.ResetPassword{
+	margin-top: 100px;
+}
+
+.lireCGU{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.CGU{
+	margin-top: 15px;
+}
+
+.contact{
+	height: 100%;
+}
+
+.contactHeader{
+	margin-top: 50px;
+}
+
+.titreMessageGarcon {
+	font-size: 15px;
+    color: #0193ff;
+}
+
+.titreMessageGarcon a {
+	color: #0193ff;
+}
+
+.titreMessageGarcon a:hover {
+	color: #0193ff;
+}
+
+.titreMessageFille {
+	font-size: 15px;
+    color: #ff2c3e;
+}
+
+.titreMessageFille a {
+	color: #ff2c3e;
+}
+
+.titreMessageFille a:hover {
+	color: #ff2c3e;
+}
+
+.reponseMessage{
+	font-size: 14px;
+	color: white;
+}
+
+.reponseMessage a{
+	font-size: 14px;
+	color: white;
+}
+
+.reponseMessage a:hover{
+	font-size: 14px;
+	color: white;
+}
+
+
+.filleMessageBackground{
+	background-color: white;
+    height: 30px;
+    margin-bottom: -15px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.garconMessageBackground{
+	background-color: white;
+    height: 30px;
+    margin-bottom: -15px;
+    padding-left: 10px;
+    padding-top: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.garconMessageBackConseil {
+    background-color: #79c6ff;
+    margin-bottom: -15px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+}
+
+.filleMessageBackConseil {
+    background-color: #fd9fd4;
+    margin-bottom: -15px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+}
+
+.filleMessageDon{
+	color:#ff617d;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.garconMessageDon{
+	color:#2185d0;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+
+.filleMessage{
+	color:#ff617d;
+}
+
+.filleMessage a{
+	color:#ff617d;
+}
+
+.filleMessage a:hover{
+	color:#ff617d;
+}
+
+
+.garconMessage{
+	color:#2185d0;
+}
+
+.garconMessage a{
+	color:#2185d0;
+}
+
+.garconMessage a:hover{
+	color:#2185d0;
+}
+
+.espace{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.cacher{
+	display: none;
+}
+
+.visible{
+	display: inline-block;
+}
+
+.onlineChat{
+	float: right;
+	color: #00bf00;
+}
+
+.visibleProfil{
+	display: inline-block;
+	width: 100%;
+}
+
+.visibleProfil a{
+	color: white;
+	font-size: 16px;
+}
+
+.visibleProfil a:hover{
+	color: white;
+	font-size: 16px;
+}
+
+.fille{
+	color:#ff617d;
+	display: inline-block;
+}
+
+.fille a{
+	color:#ff617d;
+}
+
+.fille a:hover{
+	color:#ff617d;
+}
+
+.garcon{
+	color:#2185d0;
+	display: inline-block;
+}
+
+.garcon a{
+	color:#2185d0;
+}
+
+.garcon a:hover{
+	color:#2185d0;
+}
+
+.vote{
+	color: green;
+	margin-right: 10px;
+}
+
+.consigne{
+	font-size: 16px;
+}
+
+.consigne1{
+	font-size: 14px;
+	display: inline-block;
+}
+
+.consigne2{
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.consigne3{
+	font-size: 14px;
+	color: red;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.filleConseiller{
+	background-color: #e03997;
+	color: white;
+	padding-left: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;  
+}
+
+.garconConseiller{
+	background-color: #2185d0;
+	color: white;
+	padding-left: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;  
+}
+
+.MainContent .ui.sortable.table thead th.ascending:after {
+    content: '';
+}
+
+.MainContent .ui.sortable.table thead th.sorted:after {
+    display: none;
+}
+
+
+.MainContentPage .ui.header:first-child{
+	text-align: center;
+}
+
+.ResultatConseiller{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.valideChat{
+	background-color: #21ba45;
+    color: #fff;
+    text-shadow: none;
+    background-image: none;
+    height: 120px;
+    width: 40px;
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-top: 40px;
+    padding-left: 5px;
+}
+
+.valideChatForm{
+	position: fixed;
+    bottom: 0px;
+    left: 10px;
+    margin-right: 5px;
+    margin-left: 210px;
+    width: 100%;
+}
+
+.valideChatArea{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.AffficheDiscussion{
+	display: block;
+}
+
+.AffficheContact{
+	display: block;
+	background-color: #e9ebee;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 1px;  
+}
+
+.message_droite{
+  display: block;
+  float: right;
+  background-color: #0a68b4;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  clear: both;
+  margin-right: 10px;
+}
+
+
+.message_gauche{
+  display: block;
+  float: left;
+  background-color: #f5f3f3;
+  color: #000;
+  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  clear: both;
+}
+
+.message_droite_date{
+  display: block;
+  font-size: 12px;
+  float: right;
+  color: #d2d2d2;
+  margin-bottom: 2px;
+  max-width: 80%;
+  clear: both;
+  margin-top: 20px;
+  margin-right: 10px;
+  
+}
+
+.message_gauche_date{
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: #d2d2d2;
+  margin-bottom: 2px;
+  max-width: 80%;
+  clear: both;
+  margin-top: 20px;
+  
+}
+
+.headerChat{
+	height: 50px;
+    padding-left: 20px;
+    /*background-color: white;*/
+    margin-left: 10px;
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
+
+.current{
+	background-color: #0a68b4;
+	color: white;
+}
+
+.current.item{
+	background-color: #0a68b4;
+	color: white;
+}
+
+.notRead{
+	background-color: orange;
+}
+
+.chat{
+	visibility: hidden;
+}
+
+.ChatUsername{
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.ChatAge{
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.recommmander{
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 5px
+}
+
+.FaireDon{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.menuFixe{
+	position: fixed;
+	top: 0px;
+}
+
+.espaceContact{
+	height: 30px;
+}
+
+.LastConseilleresContent{
+	margin-bottom: 10px;
+	z-index: -1;
+	width: 210px;
+
+}
+
+.presentationConseiller{
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.MenuItem{
+	padding-left: 20px;
+	height: 35px;
+	color: black;
+	padding-top: 5px;
+}
+
+.MenuItem a{
+	color: black;
+}
+
+.MenuItem a:hover{
+	color: black;
+}
+
+
+.MenuItem:hover{
+	color: black;
+	background-color: #e9ebee;
+}
+
+.none{
+	display: none;
+}
+
+.AgeProfil{
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: normal;
+}
+
+.LastConnectionProfil{
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.PointOnline{
+	color: green;
+	margin-right: 5px;
+
+}
+
+.ButtonProfil{
+	float: right;
+	margin-top: -70px;
+}
+
+.ButtonProfil a{
+	color: inherit;
+}
+
+.ButtonProfil a:hover{
+	color: inherit;
+}
+
+.modifierFormProfil{
+	float: right;
+	position: relative;
+	top: -5px;
+}
+
+
+.ui.message>:first-child .modifierFormProfil{
+    margin-top: -10px;
+}
+
+.recommandations{
+	margin-top: 10px;
+}
+
+.recommandations a{
+	color: #4183c4;
+}
+
+.recommandations a:hover{
+	color: white;
+}
+
+.recommandationsInline{
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.titreRecomandation{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.titreMessageRecommandation a{
+	color: white;
+	font-size: 14px;
+}
+
+.titreMessageRecommandation a:hover{
+	color: white;
+	font-size: 14px;
+}
+
+.noteRecommandation{
+	float: right;
+}
+
+.textProfil{
+	padding-top: 15px;
+	font-size: 15px;
+	color: black;
+}
+
+.inputprofil{
+	margin-top: 40px;
+}
+
+.titreProfil{
+	font-size: 16px;
+	height: 10px;
+	float: left;
+
+
+}
+
+.headerProfil{
+	height: 40px;
+}
+
+.MenuLeftLastConseiller{
+	height: 600px;
+	overflow: auto;
+	width: 210px;
+}
+
+.espaceConseiller{
+	height: 35px;
+}
+
+.supprimerFavoris{
+	float: right;
+	margin-top: -5px;
+}
+
+.AjouterReponse{
+	margin-top: 10px;
+}
+
+.ListeMesMessages{
+	margin-top: -5px;
+}
+
+.menuPerso{
+	margin-top: 20px;
+}
+
+.textCendrillon{
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+}
+
+.center{
+	text-align: center;
+}
+
+.titre{
+	font-weight: bold;
+}
+
+.right{
+	float: right;
+}
+
+.imgLivre{
+	height: 350px;
+}
+
+.corpsText{
+	font-size: 16px;
+}
+
+.titreNumeros{
+	font-weight: bold;
+	font-size: 20px;
+	color: #8e0505;
+}
+
+.contactMargin{
+	margin-top: 60px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.textDons{
+	font-size: 16px;
+	margin-bottom: 5px;
+	
+}
+
+.cardSection{
+	margin-top: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.cardblock{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: normal;
+	padding-top: 10px;
+}
+
+.buttonMontant{
+    color: #fff;
+    text-shadow: none;
+    /*background-color: #2185d0;*/
+    font-size: .85714286rem;
+    margin: 0 .25em 0 0;
+    padding: .78571429em 1.5em .78571429em;
+    font-weight: 700;
+    line-height: 1em;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .28571429rem;
+    overflow: visible;
+    width: 60px;
+    display: inline-block;
+}
+
+.buttonMontant:hover{
+	background-color:#db2828;
+}
+
+.red{
+	/*background-color:#db2828;*/
+	color: #fff;
+}
+
+.red1{
+	background-color:#db2828;
+	color: #fff;
+}
+
+.blue{
+	background-color: #2185d0;
+}
+
+
+.TotalDonEffectué{
+	display: inline-block;
+	float: right;
+}
+
+.demanderPaiement{
+	font-size: 16px;
+}
+
+.formPaiement{
+	margin-top: 10px;
+}
+
+.fnac{
+	width: 100px;
+	margin-top: 20px;
+}
+
+.amazon{
+	width: 130px;
+	margin-left: 20px;
+}
+
+.PubLivre{
+	float: right;
+	margin-top: 80px;
+	margin-right: 100px;
+	font-size: 16px;
+}
+
+.Commande{
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.buttonCommande{
+	float: right;
+	margin-top: 50px;
+	margin-right: 50px;
+}
+
+.buttonCommande a{
+	color: white;
+}
+
+.buttonCommande a:hover{
+	color: white;
+}
+
+.imgLivreCommande{
+	margin-left: 100px;
+}
+
+.prix{
+	float: right;
+	margin-top: -200px;
+	margin-right: 100px;
+}
+
+.ItemChatNotif{
+	color: black;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.dateNotifChat{
+	font-style: oblique;
+	float: right;
+}
+
+.NotifChatContent{
+	color: black;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.NotifChatContent a{
+	color: black;
+	font-weight: bold;
+}
+
+.NotifChatContent a:hover{
+	color: black;
+	font-weight: bold;
+}
+
+.FilleNotif{
+	color: #e03997;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.GarconNotif{
+	color: #2185d0;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.FilledateNotifChat{
+	font-style: oblique;
+	color: #e03997;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.GarcondateNotifChat{
+	font-style: oblique;
+	color: #2185d0;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.FilledateNotifReponse{
+	font-style: oblique;
+	color: #e03997;
+	display: inline-block;
+	margin-left: 10px;
+	float: right;
+	margin-right: 10px;
+}
+
+.GarcondateNotifReponse{
+	font-style: oblique;
+	color: #2185d0;
+	display: inline-block;
+	margin-left: 10px;
+	float: right;
+	margin-right: 10px;
+}
+
+.ListeChat{
+	width: 400px;
+}
+
+.ListeChatUnread{
+	background-color: #ffda96;
+	width: 400px;
+}
+
+.titreNotif{
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.DropdownMenuNotif.ui.dropdown .menu>* {
+    white-space: inherit;
+}
+
+.iconNotif{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	color: grey;
+}
+
+.visiblebutton{
+	display: inline-block;
+}
+
+.visibleNote{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.deleteCount{
+	font-size: 16px;
+}
+
+.ageAuthor{
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.voirPlus{
+	margin-top: 20px;
+}
+
+.TitreNaissance{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.TextNaissance{
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.titreAide{
+	text-align: center;
+}
+
+.ContainerPresentation{
+	margin-top: 0px;
+	font-size: 15px;
+}
+
+.NotifUnread{
+	background-color: #f5f5f5db;
+}
+
+.VisibleAjouter{
+	margin-bottom: 20px;
+}
+
+.ConfirmationForm{
+	float: right;
+	margin-top: 0px;
+	display: inline-block;
+}
+
+.montantDonNotif{
+	float: right;
+	color: grey;
+	margin-right: 10px;
+}
+
+.espacePub{
+	margin-top: 15px;
+}
+
+.UpdateNaissance{
+	float: right;
+	margin-top: -50px;
+}
+
+.buttonSearch{
+	display: inline-block;
+	margin-right: 30px;
+	color: white;
+	font-size: 20px;
+	margin-top: -20px;
+	float: right;
+}
+
+.textConseillere{
+	font-size: 16px;
+
+}
+
+.ageAuthorReponse{
+	display: inline-block;
+	margin-left: 10px;
+	color: white;
+}
+
+.deleteContact{
+	color: red;
+	float: right;
+	width: 20px;
+	height: 20px;
+	padding-left: 3px;
+	padding-top: 1px;
+}
+
+.Signaler{
+	float: right;
+	margin-top: -10px;
+	margin-right: 20px;
+}
+
+.visibleMessage{
+	display: inline-block;
+    margin-top: -20px;
+}
+
+.star {
+	color:#236fa9;
+	display: inline-block;
+}
+
+.headerForm h2.ui.header{
+	color:#236fa9;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+.labelLivre{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.loginMobile{
+	display: block;
+}
+
+.espaceSubscribe{
+	height: 100px;
+}
+
+.goBackForget{
+
+}
+
+@media only screen and (max-width: 1800px) {
+
+	/*.ContentDiscussion{
+		width: 80%;
+	}*/
+
+	.valideChatForm {
+   	 padding-right: 20%;
+	}
+
+	.headerChat{
+		width: 1000px;
+	}
+
+
+}
+
+@media only screen and (max-width: 1180px) {
+
+	.valideChatForm {
+    	padding-right: 20%;
+	}
+
+	.headerChat{
+		width: 800px;
+	}
+}
+
+
+@media only screen and (max-width: 1080px) {
+
+	.ContentDiscussion{
+		padding-right: 9%;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+
+	.valideChatForm {
+    	padding-right: 25%;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+
+	.ContentDiscussion{
+		padding-right: 13%;
+	}
+
+	.valideChatForm {
+    	padding-right: 29%;
+	}
+
+
+}
+
+@media only screen and (max-height: 850px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 600px;
+	}
+
+
+
+
+}
+
+@media only screen and (max-height: 800px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 550px;
+	}
+
+	.MenuLeftLastConseiller{
+		height: 500px;
+		overflow: auto;
+	}
+
+
+}
+
+
+
+@media only screen and (max-height: 750px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 500px;
+	}
+
+	.MenuLeftLastConseiller{
+		height: 450px;
+		overflow: auto;
+	}
+
+
+}
+
+@media only screen and (max-height: 700px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 450px;
+	}
+
+	.MenuLeftLastConseiller{
+		height: 400px;
+		overflow: auto;
+	}
+
+
+}
+
+@media only screen and (max-height: 650px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 400px;
+	}
+
+
+}
+
+@media only screen and (max-height: 600px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 350px;
+	}
+
+
+}
+
+@media only screen and (max-height: 550px) {
+
+	.ContentDiscussion{
+		padding-bottom: 400px;
+	}
+
+	.ChatContactLeft{
+		height: 300px;
+	}
+
+
+}
