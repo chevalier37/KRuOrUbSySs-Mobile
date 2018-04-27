@@ -296,26 +296,6 @@ class ListeMessagesPostes extends Component {
 	         				}
 	         				
 	         				</div>
-	         				
-	         				<div className="dateMessage">{this.props.nbrreponse} {this.reponse()} </div>
-	          				<div className="repondreMessage">
-	          					<Link to={'/singleMessage/' + this.props.message._id} >
-	          						<Button  size="tiny" color="green">
-	          							Les réponses
-	          						</Button>
-	          					</Link>
-	          				</div>
-							
-							<div className="repondreMessage" >
-								<Button
-								  size="tiny"
-								  color='red'
-								  onClick={this.Supprimer.bind(this)}>
-									Supprimer
-								</Button>
-							</div>
-							
-
 
 							<p className="categorie">
 							
@@ -435,6 +415,25 @@ class ListeMessagesPostes extends Component {
 							<span className="espace">{this.state.autre} </span>
  							: "" }
 							</p>
+							<br />
+	         				
+	         				<div className="dateMessage">{this.props.nbrreponse} {this.reponse()} </div>
+	          				<div className="repondreMessage">
+	          					<Link to={'/singleMessage/' + this.props.message._id} >
+	          						<Button  size="tiny" color="green">
+	          							Les réponses
+	          						</Button>
+	          					</Link>
+	          				</div>
+							
+							<div className="repondreMessage" >
+								<Button
+								  size="tiny"
+								  color='red'
+								  onClick={this.Supprimer.bind(this)}>
+									Supprimer
+								</Button>
+							</div>
 	      				</Comment.Content>
 	    			</Comment>
 

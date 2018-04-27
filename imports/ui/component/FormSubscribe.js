@@ -417,7 +417,7 @@ class FormSubscribe extends Component {
 				    <Form.Select
 				     fluid
 				     options={Jours}
-				     placeholder='Jours'
+				     placeholder='Jour'
 				     onChange={(e, { value }) => this.jours(value)}
 				     />
 

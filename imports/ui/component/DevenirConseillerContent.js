@@ -985,9 +985,6 @@ export default class DevenirConseillerContent extends Component {
 				</div>
 			<div className={this.state.IsConseiller ? 'none' : ''}>
 				<Segment className="MainContent">
-					<Header>
-					Devenir conseiller
-					</Header>
 					<Divider />
 
 					<p className="consigne">Remplis soigneusement ce formulaire afin de devenir conseiller.</p>

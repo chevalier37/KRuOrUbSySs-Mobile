@@ -7,17 +7,19 @@ import { Sidebar, Segment, Button, Header,  } from 'semantic-ui-react'
 import Img from 'react-image'
 import { Route, Redirect } from 'react-router';
 
-
 //Component
 import HeaderPage from '../component/HeaderPage.js';
 import ContentMenuRight from '../component/ContentMenuRight.js';
 import ButtonPusher from '../component/ButtonPusher.js';
-import ContentMenuLeft from '../component/ContentMenuLeft.js';
+
 import FormPosterReponse from '../component/FormPosterReponse.js';
 import SingleMessagePost from '../component/SingleMessagePost.js';
 import ListeFavoris from '../component/ListeFavoris.js';
-
 import { Favoris } from '../../api/Favoris.js';
+
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
 
 class allFavoris extends Component {
 
@@ -27,6 +29,7 @@ class allFavoris extends Component {
           visible: false,
           username:'',
           gender:'',
+          visibleLeft:false, 
         }
     }
 
@@ -43,7 +46,12 @@ class allFavoris extends Component {
     }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentWillMount(){
       let id = this.props.match.params.id
@@ -97,13 +105,18 @@ class allFavoris extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -122,30 +135,31 @@ class allFavoris extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
               
               <Sidebar.Pusher>
-        
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
-                  <ContentMenuLeft />
-                  <div className="MainContent">
-                  <Segment>
-                  <Header>
-                    <div className="titreRecomandation"> Mes favoris </div>
-                      
-                  </Header>
-                  </Segment>
-                  
+                  <div className="MainContent">                 
                    {this.renderAllreponses()}
                   </div>    
                       
                   </div> 
                 </div>
-
               </Sidebar.Pusher>
-
         </Sidebar.Pushable>
-      
+        <FooterPage />
       </div>
     );
   }

@@ -15,12 +15,28 @@ import ContentMenuLeft from '../component/ContentMenuLeft.js';
 
 import FaCartArrowDown from 'react-icons/lib/fa/cart-arrow-down';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
+
 class Livre extends Component {
 
-    state = { visible: false }
+        constructor(props) {
+        super(props);
+        this.state = {
+          visible: false,
+          visibleLeft:false, 
+            }
+        }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentDidMount() {
         this.scrollToTop();
@@ -47,13 +63,18 @@ class Livre extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -61,7 +82,7 @@ class Livre extends Component {
 
        
         <Sidebar.Pushable >
-              <Sidebar
+               <Sidebar
                 animation='overlay'
                 className="ListRight"
                 direction='right'
@@ -72,20 +93,26 @@ class Livre extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
               
               <Sidebar.Pusher>
         
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
-                  <ContentMenuLeft />
 
                   <div className="MainContent">
                     <Segment className="MainContentPage">
-                      <Header>
-                      Le Secret de Cendrillon
-                      </Header>
-                      <Divider />
-
                       <Img className="imgLivre" src="/livre.png"/>
 
                       <div className="PubLivre">
@@ -97,13 +124,13 @@ class Livre extends Component {
                         <Button color="blue">
                         <Link to={'/CommandeLivre/'}>  
                            <FaCartArrowDown />
-                           <p className="Commande">Commande express</p>
+                           <p className="Commande">Commander</p>
                         </Link>
                          </Button>
                        </div>
                       </div>
                       <div  className="textCendrillon">
-                      <br /><br />
+                      <br /><br />  <br /><br />
                       <div className="center titre">
                         À tous ceux qui croient en leurs rêves.
                       </div><br /><br />
@@ -243,6 +270,7 @@ class Livre extends Component {
                 </div>
               </Sidebar.Pusher>
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

@@ -90,36 +90,118 @@ class ResultatsConseillerContent extends Component {
 	          	 		/>
           	 		</Link>
 				</div>
-				</Table.Cell>
-              	<Table.Cell className={this.props.premierAmourText}><div className="display-linebreak textConseillere">{conseiller.premierAmourText}</div></Table.Cell>
-              	<Table.Cell className={this.props.trahisonText}><div className="display-linebreak textConseillere">{conseiller.trahisonText}</div></Table.Cell>
-              	<Table.Cell className={this.props.FriendzoneText}><div className="display-linebreak textConseillere">{conseiller.FriendzoneText}</div></Table.Cell>
-              	<Table.Cell className={this.props.amourdistanceText}><div className="display-linebreak textConseillere">{conseiller.amourdistanceText}</div></Table.Cell>
-              	<Table.Cell className={this.props.separationText}><div className="display-linebreak textConseillere">{conseiller.separationText}</div></Table.Cell>
-              	<Table.Cell className={this.props.timiditeText}><div className="display-linebreak textConseillere">{conseiller.timiditeText}</div></Table.Cell>
-              	<Table.Cell className={this.props.depressionText}><div className="display-linebreak textConseillere">{conseiller.depressionText}</div></Table.Cell>
-              	<Table.Cell className={this.props.mutilationText}><div className="display-linebreak textConseillere">{conseiller.mutilationText}</div></Table.Cell>
-              	<Table.Cell className={this.props.suicideText}><div className="display-linebreak textConseillere">{conseiller.suicideText}</div></Table.Cell>
-              	<Table.Cell className={this.props.decesText}><div className="display-linebreak textConseillere">{conseiller.decesText}</div></Table.Cell>
-              	<Table.Cell className={this.props.premierfoisText}><div className="display-linebreak textConseillere">{conseiller.premierfoisText}</div></Table.Cell>
-              	<Table.Cell className={this.props.contraceptionText}><div className="display-linebreak textConseillere">{conseiller.contraceptionText}</div></Table.Cell>
-              	<Table.Cell className={this.props.mstText}><div className="display-linebreak textConseillere">{conseiller.mstText}</div></Table.Cell>
-              	<Table.Cell className={this.props.violText}><div className="display-linebreak textConseillere">{conseiller.violText}</div></Table.Cell>
-              	<Table.Cell className={this.props.avortementText}><div className="display-linebreak textConseillere">{conseiller.avortementText}</div></Table.Cell>
-              	<Table.Cell className={this.props.orientationSexText}><div className="display-linebreak textConseillere">{conseiller.orientationSexText}</div></Table.Cell>
-              	<Table.Cell className={this.props.AnorexieText}><div className="display-linebreak textConseillere">{conseiller.AnorexieText}</div></Table.Cell>
-              	<Table.Cell className={this.props.obesiteText}><div className="display-linebreak textConseillere">{conseiller.obesiteText}</div></Table.Cell>
-              	<Table.Cell className={this.props.drogueText}><div className="display-linebreak textConseillere">{conseiller.drogueText}</div></Table.Cell>
-              	<Table.Cell className={this.props.alcoolText}><div className="display-linebreak textConseillere">{conseiller.alcoolText}</div></Table.Cell>
-              	<Table.Cell className={this.props.complexeText}><div className="display-linebreak textConseillere">{conseiller.complexeText}</div></Table.Cell>
-              	<Table.Cell className={this.props.hopitalText}><div className="display-linebreak textConseillere">{conseiller.hopitalText}</div></Table.Cell>
-              	<Table.Cell className={this.props.accidentText}><div className="display-linebreak textConseillere">{conseiller.accidentText}</div></Table.Cell>
-              	<Table.Cell className={this.props.handicapText}><div className="display-linebreak textConseillere">{conseiller.handicapText}</div></Table.Cell>
-              	<Table.Cell className={this.props.echecEcoleText}><div className="display-linebreak textConseillere">{conseiller.echecEcoleText}</div></Table.Cell>
-              	<Table.Cell className={this.props.HarcelementText}><div className="display-linebreak textConseillere">{conseiller.HarcelementText}</div></Table.Cell>
-              	<Table.Cell className={this.props.discriminationText}><div className="display-linebreak textConseillere">{conseiller.discriminationText}</div></Table.Cell>
-              	<Table.Cell className={this.props.ViolenceText}><div className="display-linebreak textConseillere">{conseiller.ViolenceText}</div></Table.Cell>
+				<div className={this.props.premierAmourText}>
+              	<div className="display-linebreak textConseillere">{conseiller.premierAmourText}</div>
+              	</div>
 
+              	<div className={this.props.trahisonText}>
+              	<div className="display-linebreak textConseillere">{conseiller.trahisonText}</div>
+              	</div>
+              	
+              	<div className={this.props.FriendzoneText}>
+              	<div className="display-linebreak textConseillere">{conseiller.FriendzoneText}</div>
+              	</div>
+
+              	<div className={this.props.amourdistanceText}>
+              	<div className="display-linebreak textConseillere">{conseiller.amourdistanceText}</div>
+              	</div>
+
+              	<div className={this.props.separationText}>
+              	<div className="display-linebreak textConseillere">{conseiller.separationText}</div>
+              	</div>
+
+              	<div className={this.props.timiditeText}>
+              	<div className="display-linebreak textConseillere">{conseiller.timiditeText}</div>
+              	</div>
+
+              	<div className={this.props.depressionText}>
+              	<div className="display-linebreak textConseillere">{conseiller.depressionText}</div>
+              	</div>
+
+              	<div className={this.props.mutilationText}>
+              	<div className="display-linebreak textConseillere">{conseiller.mutilationText}</div>
+              	</div>
+
+              	<div className={this.props.suicideText}>
+              	<div className="display-linebreak textConseillere">{conseiller.suicideText}</div>
+              	</div>
+
+              	<div className={this.props.decesText}>
+              	<div className="display-linebreak textConseillere">{conseiller.decesText}</div>
+              	</div>
+
+              	<div className={this.props.premierfoisText}>
+              	<div className="display-linebreak textConseillere">{conseiller.premierfoisText}</div>
+              	</div>
+
+              	<div className={this.props.contraceptionText}>
+              	<div className="display-linebreak textConseillere">{conseiller.contraceptionText}</div>
+              	</div>
+
+              	<div className={this.props.mstText}>
+              	<div className="display-linebreak textConseillere">{conseiller.mstText}</div>
+              	</div>
+
+              	<div className={this.props.violText}>
+              	<div className="display-linebreak textConseillere">{conseiller.violText}</div>
+              	</div>
+
+              	<div className={this.props.avortementText}>
+              	<div className="display-linebreak textConseillere">{conseiller.avortementText}</div>
+              	</div>
+
+              	<div className={this.props.orientationSexText}>
+              	<div className="display-linebreak textConseillere">{conseiller.orientationSexText}</div>
+              	</div>
+
+              	<div className={this.props.AnorexieText}>
+              	<div className="display-linebreak textConseillere">{conseiller.AnorexieText}</div>
+              	</div>
+
+              	<div className={this.props.obesiteText}>
+              	<div className="display-linebreak textConseillere">{conseiller.obesiteText}</div>
+              	</div>
+
+              	<div className={this.props.drogueText}>
+              	<div className="display-linebreak textConseillere">{conseiller.drogueText}</div>
+              	</div>
+
+              	<div className={this.props.alcoolText}>
+              	<div className="display-linebreak textConseillere">{conseiller.alcoolText}</div>
+              	</div>
+
+              	<div className={this.props.complexeText}>
+              	<div className="display-linebreak textConseillere">{conseiller.complexeText}</div>
+              	</div>
+
+              	<div className={this.props.hopitalText}>
+              	<div className="display-linebreak textConseillere">{conseiller.hopitalText}</div>
+              	</div>
+
+              	<div className={this.props.accidentText}>
+              	<div className="display-linebreak textConseillere">{conseiller.accidentText}</div>
+              	</div>
+
+				<div className={this.props.handicapText}>
+              	<div className="display-linebreak textConseillere">{conseiller.handicapText}</div>
+              	</div>
+
+              	<div className={this.props.echecEcoleText}>
+              	<div className="display-linebreak textConseillere">{conseiller.echecEcoleText}</div>
+              	</div>
+
+              	<div className={this.props.HarcelementText}>
+              	<div className="display-linebreak textConseillere">{conseiller.HarcelementText}</div>
+              	</div>
+
+              	<div className={this.props.discriminationText}>
+              	<div className="display-linebreak textConseillere">{conseiller.discriminationText}</div>
+              	</div>
+
+              	<div className={this.props.ViolenceText}>
+              	<div className="display-linebreak textConseillere">{conseiller.ViolenceText}</div>
+				</div>
+				</Table.Cell>
 			</Table.Row>
         );
       });
@@ -180,21 +262,6 @@ class ResultatsConseillerContent extends Component {
 						
 					<div className={this.props.pasDeResultatTableau}>
 					     <Table sortable celled fixed selectable color="teal" >
-					        <Table.Header>
-					          <Table.Row>
-					            <Table.HeaderCell
-					             width={3}
-					             sorted={column === 'username' ? direction : null}
-					             onClick={this.handleSort('username')}>
-					              Pseudo
-					            </Table.HeaderCell>
-					            <Table.HeaderCell
-					             sorted={column === 'message' ? direction : null} 
-					             onClick={this.handleSort('message')}>
-					              Message
-					            </Table.HeaderCell>
-					          </Table.Row>
-					        </Table.Header>
 					        <Table.Body>
 					             {this.renderSearchConseiller()}
 					        </Table.Body>
@@ -214,21 +281,6 @@ class ResultatsConseillerContent extends Component {
 					<Divider />
 						
 				     <Table sortable celled fixed selectable color="red" >
-				        <Table.Header>
-				          <Table.Row>
-				            <Table.HeaderCell
-				             width={3} 
-				             sorted={column === 'name1' ? direction : null}
-				             onClick={this.handleSortConseilleres('name1')}>
-				              Pseudo
-				            </Table.HeaderCell>
-				            <Table.HeaderCell
-				             sorted={column === 'message1' ? direction : null}
-				             onClick={this.handleSortConseilleres('message1')}>
-				              Message
-				            </Table.HeaderCell>
-				          </Table.Row>
-				        </Table.Header>
 				        <Table.Body>
 				             {this.renderSearchAllConseiller()}
 				        </Table.Body>

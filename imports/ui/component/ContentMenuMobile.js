@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Dropdown, Menu, Icon, Header, List, Button, Checkbox, Form, Select, Divider } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
+import { Route, Redirect } from 'react-router';
 
 import FaUser from 'react-icons/lib/fa/user';
 import FaComments from 'react-icons/lib/fa/comments';
@@ -45,7 +46,10 @@ export default class ContentMenuRight extends Component {
   
   	render() {
   		const { activeItem } = this.state
-		
+		const logout = this.state.logout;
+  		if (logout) {
+      	return <Redirect to="/" />;
+    	}
 		return (
 			<div className="ListeSideBar">
 				<List relaxed>

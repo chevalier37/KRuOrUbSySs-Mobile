@@ -1171,12 +1171,7 @@ class ProfilContent extends Component {
               	 			/>
               	 		</div>
 
-	              	 	<div className={this.props.id == Meteor.userId() ? "UpdateNaissance" : 'none'}>
-		              	 	<Link to={'/MiseAjourNaissance/'}>
-		              	 		<Button>Date de naissance</Button>
-		              	 	</Link>
-	              	 	</div>
-
+	              	 	
               	 		<div className={this.props.profile.note>=1 && this.props.profile.note<2 ? "visiblenote" : "none"}>
 							<Rating icon='heart'
 		              			defaultRating={1}

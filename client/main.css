@@ -176,6 +176,15 @@ header {
     height: 30px;
 }
 
+.containerSupHeaderConnexion{
+	background-image: linear-gradient(#8e0505, #b90202 100%);
+	display: block;
+	position: fixed;
+    top: 0px;
+    width: 100%;
+
+}
+
 .containerHeader{
 	margin-left: auto;
 	margin-right: auto;
@@ -236,8 +245,8 @@ header {
 }
 
 .pusher{
-	display: inline-block;
-	margin-top: -3px;
+	/*display: inline-block;
+	margin-top: -3px;*/
 }
 
 .ListeSideBar{
@@ -325,8 +334,8 @@ header {
 }
 
 .MainModifierConseiller{
-	float: right;
-    min-width: 700px;
+	/* float: right; */
+    /* min-width: 700px; */
     margin-top: 55px;
     min-height: 800px;
     font-size: 14px;
@@ -360,7 +369,6 @@ header {
 .dateMessage{
 	display: inline-block;
 	margin-left: 10px;
-	float: right;
 }
 
 .nameAuthor{
@@ -1222,7 +1230,7 @@ header {
 }
 
 .supprimerFavoris{
-	float: right;
+	/*float: right;*/
 	margin-top: -5px;
 }
 
@@ -1258,6 +1266,7 @@ header {
 
 .imgLivre{
 	height: 350px;
+	margin-left: 10%;
 }
 
 .corpsText{
@@ -1371,6 +1380,7 @@ header {
 	float: right;
 	margin-top: 50px;
 	margin-right: 50px;
+	margin-bottom: 20px;
 }
 
 .buttonCommande a{
@@ -1572,7 +1582,7 @@ header {
 
 .textConseillere{
 	font-size: 16px;
-
+	font-weight: normal;
 }
 
 .ageAuthorReponse{
@@ -1636,7 +1646,14 @@ header {
 	font-size: 16px;
 	position: fixed;
 	left: 50px;
-	margin-top: -2px;
+	margin-top: 0px;
+}
+
+.goBack{
+	font-size: 24px;
+    margin-top: -4px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 1800px) {

@@ -41,17 +41,9 @@ class ContentMessagePostes extends Component {
 		
 		return (
 			<div className="MainContent">
-				<Segment>
-					<Header>
-					Mes messages
-					</Header>
-				</Segment>
-	  			
 	  			<div className="ListeMesMessages">
 	  				{this.renderAllMessages()}
 	  			</div>
-	  			
-
 			</div>
 
 		);

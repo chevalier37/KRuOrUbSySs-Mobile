@@ -25,7 +25,7 @@ class Connexion extends Component {
     return (
       <div className="container">
         <header>
-          <div className="containerSupHeader">
+          <div className="containerSupHeaderConnexion">
             <div className="containerHeader">
               <Header />
             </div>

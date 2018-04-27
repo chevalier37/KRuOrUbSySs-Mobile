@@ -81,11 +81,6 @@ class ListeDonsContent extends Component {
 					</Link>
 				</div>
 				</Table.Cell>
-
-	            <Table.Cell>{dons.montantTotal}€</Table.Cell>
-              	<Table.Cell>
-				{dons.frais}€
-              	</Table.Cell>
               	<Table.Cell>
               	{dons.montantPercu}€
               	</Table.Cell>
@@ -144,27 +139,6 @@ class ListeDonsContent extends Component {
 
 					<div className={this.props.pasDeResultatTableau}>
 					     <Table sortable celled fixed selectable color="teal" >
-					        <Table.Header>
-					          <Table.Row>
-					            <Table.HeaderCell
-					             width={3}
-					             sorted={column === 'username' ? direction : null}
-					             onClick={this.handleSort('username')}>
-					              Destinataire
-					            </Table.HeaderCell>
-					            <Table.HeaderCell 
-					            width={2} 
-					            sorted={column === 'age' ? direction : null} 
-					            onClick={this.handleSort('age')}>
-					              Montant
-					            </Table.HeaderCell>
-					            <Table.HeaderCell
-					             sorted={column === 'message' ? direction : null} 
-					             onClick={this.handleSort('message')}>
-					              Message
-					            </Table.HeaderCell>
-					          </Table.Row>
-					        </Table.Header>
 					        <Table.Body>
 					             {this.renderDonsEffectues()}
 					        </Table.Body>
@@ -179,46 +153,6 @@ class ListeDonsContent extends Component {
 					</Header>
 					<Divider />										
 				     <Table sortable celled fixed selectable color="red" >
-				        <Table.Header>
-				          <Table.Row>
-				            <Table.HeaderCell
-				             width={3} 
-				             >
-				              De la part de
-				            </Table.HeaderCell>
-
-				            <Popup
-   							 trigger={<Table.HeaderCell
-				             width={2}
-				             >
-				              Montant
-				            </Table.HeaderCell>}
-							    content='Montants reçus'
-							  />
-
-				            <Popup
-   							 trigger={<Table.HeaderCell
-				             width={3}
-				             >
-				              Participation
-				            </Table.HeaderCell>}
-							    content='Participation au fonctionnement de Kurbys'
-							  />
-
-				            <Popup
-   							 trigger={<Table.HeaderCell
-				             width={2}
-				             >
-				              Total
-				            </Table.HeaderCell>}
-							    content='Montants pouvant être retirés'
-							  />
-
-				            <Table.HeaderCell>
-				              Message
-				            </Table.HeaderCell>
-				          </Table.Row>
-				        </Table.Header>
 				        <Table.Body>
 				             {this.renderDonsRecus()}
 				        </Table.Body>

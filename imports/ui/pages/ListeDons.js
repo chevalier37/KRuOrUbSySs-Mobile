@@ -13,18 +13,29 @@ import ButtonPusher from '../component/ButtonPusher.js';
 import ContentMenuLeft from '../component/ContentMenuLeft.js';
 import ListeDonsContent from '../component/ListeDonsContent.js';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
 class ListeDons extends Component {
 
-    state = { visible: false }
-
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
-
-    componentDidMount() {
-        this.scrollToTop();
+    constructor(props) {
+        super(props);
+        this.state = {
+          visible: false,
+          visibleLeft:false, 
+        }
     }
 
-    componentDidUpdate() {
+    toggleVisibility = () => this.setState({ visible: !this.state.visible })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
+
+    componentDidMount() {
         this.scrollToTop();
     }
 
@@ -45,19 +56,23 @@ class ListeDons extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
         </header>
 
-       
         <Sidebar.Pushable >
               <Sidebar
                 animation='overlay'
@@ -67,25 +82,32 @@ class ListeDons extends Component {
                 icon='labeled'
                 vertical
                 className="SidebarUI"
-                onClick={this.toggleVisibility}
               >
                 <ContentMenuRight />
+              </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
               </Sidebar>
               
               <Sidebar.Pusher>
         
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
-                  
-                  <ContentMenuLeft />
                   <ListeDonsContent theme={this.props.match.params.theme}/> 
-                      
                   </div> 
                 </div>
-
               </Sidebar.Pusher>
-
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

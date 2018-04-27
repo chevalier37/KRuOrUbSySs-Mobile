@@ -14,12 +14,27 @@ import ButtonPusher from '../component/ButtonPusher.js';
 import ContentMenuLeft from '../component/ContentMenuLeft.js';
 import ContentMessagePostes from '../component/ContentMessagePostes.js';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
 class Home extends Component {
 
-    state = { visible: false }
+    constructor(props) {
+        super(props);
+        this.state = {
+          visible: false,
+          visibleLeft:false, 
+        }
+    }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentDidMount() {
         this.scrollToTop();
@@ -46,13 +61,18 @@ class Home extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -70,17 +90,30 @@ class Home extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
+
               
               <Sidebar.Pusher>
 
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
-                    <ContentMenuLeft />
                     <ContentMessagePostes  />  
                   </div> 
                 </div>
               </Sidebar.Pusher>
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

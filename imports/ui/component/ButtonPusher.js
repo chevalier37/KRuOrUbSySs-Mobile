@@ -6,7 +6,7 @@ import BodyClassName from 'react-body-classname';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
-
+import { withRouter } from 'react-router'
 //Icons
 import Book from 'react-icons/lib/fa/book';
 import ThumbsUp from 'react-icons/lib/fa/thumbs-up';
@@ -18,6 +18,7 @@ import SignOut from 'react-icons/lib/fa/sign-out';
 import Bell from 'react-icons/lib/fa/bell';
 import Edit from 'react-icons/lib/fa/edit';
 import Search from 'react-icons/lib/fa/search';
+import Arrow from 'react-icons/lib/fa/arrow-left';
 
 
 import ChatItemNotif from './ChatItemNotif.js';
@@ -30,9 +31,12 @@ import { Chat } from '../../api/Chat.js';
 import { Comments } from '../../api/Reponses.js';
 import { Recommandations } from '../../api/Recommandations.js';
 import { Dons } from '../../api/Stripe.js';
-
+ 
 class ButtonPusher extends Component {
-  
+  static contextTypes = {
+    router: () => true, // replace with PropTypes.object if you use them
+  }
+
   constructor(props) {
     super(props);
  
@@ -40,7 +44,9 @@ class ButtonPusher extends Component {
       body: '',
       logout:false,
       username:'d',
-      chat:''
+      chat:'',
+      pathname:" ",
+      home:false,
     };
   }
 
@@ -64,8 +70,116 @@ class ButtonPusher extends Component {
   }
 
   componentWillMount(){
+    let first = $(location).attr('pathname');
+    first.indexOf(1);
+    first.toLowerCase();
+    pathname = first.split("/")[1];
+
+
   	{this.props.chat == 'true' ?
   	this.setState({chat:'chat'}) : ''}
+
+    if(pathname == "home"){
+      this.setState({
+      home: true,
+    });
+      
+    }else{
+      this.setState({
+      home: false,
+    });
+    }
+
+    if(pathname == "Favoris"){
+      this.setState({
+      pathname: "Mes favoris",
+    });
+    }
+
+    if(pathname == "MessagesPostes"){
+      this.setState({
+      pathname: "Mes messages",
+    });
+    }
+
+    if(pathname == "ListeDons"){
+      this.setState({
+      pathname: "Mes dons",
+    });
+    }
+
+    if(pathname == "Livre"){
+      this.setState({
+      pathname: "Le Secret de Cendrillon",
+    });
+    }
+
+    if(pathname == "AmeliorerSite"){
+      this.setState({
+      pathname: "Améliorer le site",
+    });
+    }
+
+    if(pathname == "SignalerBug"){
+      this.setState({
+      pathname: "Signaler un Bug",
+    });
+    }
+
+    if(pathname == "ContactConnecte"){
+      this.setState({
+      pathname: "Contact",
+    });
+    }
+
+    if(pathname == "NumerosUtiles"){
+      this.setState({
+      pathname: "Numéros utiles",
+    });
+    }
+
+    if(pathname == "SupprimerCompte"){
+      this.setState({
+      pathname: "Supprimer mon compte",
+    });
+    }
+
+    if(pathname == "DevenirConseiller"){
+      this.setState({
+      pathname: "Devenir conseiller",
+    });
+    }
+
+    if(pathname == "ResultatsConseiller"){
+      this.setState({
+      pathname: "Les conseillers",
+    });
+    }
+
+    if(pathname == "profil"){
+      this.setState({
+      pathname: "Profil",
+    });
+    }
+
+    if(pathname == "ModifierConseiller"){
+      this.setState({
+      pathname: "Expériences",
+    });
+    }
+
+    if(pathname == "Recommandations"){
+      this.setState({
+      pathname: "Recommandations",
+    });
+    }
+
+    if(pathname == "Notifications"){
+      this.setState({
+      pathname: "Notifications",
+    });
+    }
+
   }
 
 
@@ -74,18 +188,23 @@ class ButtonPusher extends Component {
   		let reponsesCount = this.props.reponsesCount;
   		let recommandationsCount = this.props.recommandationsCount;
   		let DonsCount = this.props.DonsCount;
-      
-      {
-       	this.props.chat == "true" ?  ChatCount = 0 : ChatCount
-      }     
+      let Name = this.props.name;
 
-		let Name = this.props.name;
+
 
 		return (
 			<div>
-           <div className="nameMobile">
-            {Name}
-            </div>
+          <div className={this.state.home ? "nameMobile" : "none"}>
+              {Name}
+          </div>
+
+          <div className={this.state.home ? "none" : "nameMobile"}>
+              <div className="goBack"
+                onClick={this.context.router.history.goBack}>
+                  <Arrow />
+              </div>
+              {this.state.pathname}
+          </div>
     			
   			    <div className={this.state.chat + " "+ "pusher"}>
               <div className="buttonSearch">
@@ -103,10 +222,9 @@ export default withTracker(() => {
   let id = Meteor.user();
   let search = Meteor.users.findOne(id);
   {id ? name = search.username : name =''}
-  
 
   return {
   	name:name,
-    
+
   };
 })(ButtonPusher);

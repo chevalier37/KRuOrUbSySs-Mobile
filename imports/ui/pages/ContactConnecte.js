@@ -11,12 +11,27 @@ import ContentMenuRight from '../component/ContentMenuRight.js';
 import ButtonPusher from '../component/ButtonPusher.js';
 import ContentMenuLeft from '../component/ContentMenuLeft.js';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
 class DevenirConseiller extends Component {
 
-    state = { visible: false }
+    constructor(props) {
+        super(props);
+        this.state = {
+          visible: false,
+          visibleLeft:false, 
+        }
+      }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentDidMount() {
         this.scrollToTop();
@@ -39,17 +54,22 @@ class DevenirConseiller extends Component {
     return (
       <div className="container">
       <div ref={el => { this.el = el; }} ></div>
-        <header>
+       <header>
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -67,17 +87,24 @@ class DevenirConseiller extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
               
               <Sidebar.Pusher>
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
-                    <ContentMenuLeft />
                     <div className="MainContent">
                       <Segment className="MainContentPage">
-                        <Header>
-                        Contact
-                        </Header>
-                        <Divider />
                         <div className="corpsText">
                         Pour nous contacter : editions@seconde-vie.fr
                         </div>
@@ -86,8 +113,8 @@ class DevenirConseiller extends Component {
                   </div> 
                 </div>
               </Sidebar.Pusher>
-              
-        </Sidebar.Pushable>
+          </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

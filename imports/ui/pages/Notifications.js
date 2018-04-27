@@ -18,6 +18,10 @@ import ListeNotification from '../component/ListeNotification.js';
 
 import { Notifications } from '../../api/Notifications.js';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
 class allNotifications extends Component {
 
     constructor(props) {
@@ -26,11 +30,17 @@ class allNotifications extends Component {
           visible: false,
           username:'',
           gender:'',
+          visibleLeft:false, 
         }
     }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentDidMount() {
         this.scrollToTop();
@@ -97,13 +107,18 @@ class allNotifications extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -121,16 +136,24 @@ class allNotifications extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
               
               <Sidebar.Pusher>
                 <div className="containerSite" onClick={this.toggleHidden}>
                     <div className="containerIMG">
-                      <ContentMenuLeft />
                       <div className="MainContent">
                         <Segment>
-                          <Header>
-                            <div className="titreRecomandation">Toutes mes notifications </div>
-                          </Header>
                         </Segment>
                          {this.renderAllreponses()}
                       </div>    
@@ -138,6 +161,7 @@ class allNotifications extends Component {
                 </div>
               </Sidebar.Pusher>
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }
