@@ -30,7 +30,7 @@ class contactHorsConnexion extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToBottom();
+      
     }
 
     scrollToBottom() {

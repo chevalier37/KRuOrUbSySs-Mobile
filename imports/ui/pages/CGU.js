@@ -12,16 +12,20 @@ import { Route, Redirect } from 'react-router';
 import Header1 from '../component/Header.js';
 import Footer from '../component/Footer.js';
 
+import Arrow from 'react-icons/lib/fa/arrow-left';
 
 
 class CGU extends Component {
 
+  static contextTypes = {
+    router: () => true, // replace with PropTypes.object if you use them
+  }
   componentDidMount() {
         this.scrollToTop();
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {
@@ -35,8 +39,14 @@ class CGU extends Component {
       <div className="container">
       <div ref={el => { this.el = el; }} ></div>
         <header>
-          <div className="containerSupHeader">
+          <div className="containerSupHeaderConnexion">
             <div className="containerHeader">
+            <div className="forgetBack">
+                <div className="goBack"
+                  onClick={this.context.router.history.goBack}>
+                    <Arrow />
+                 </div>
+            </div>
               <Header1 />
             </div>
           </div>
@@ -114,7 +124,7 @@ Nous nous engageons à maintenir un haut degré de confidentialité en intégran
 
                     
           <div className="containerFooter">    
-            <Footer />
+          
           </div>
                   
       </div>

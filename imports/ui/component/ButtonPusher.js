@@ -7,6 +7,8 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 import { withRouter } from 'react-router'
+import PropTypes from 'prop-types';
+
 //Icons
 import Book from 'react-icons/lib/fa/book';
 import ThumbsUp from 'react-icons/lib/fa/thumbs-up';
@@ -34,7 +36,7 @@ import { Dons } from '../../api/Stripe.js';
  
 class ButtonPusher extends Component {
   static contextTypes = {
-    router: () => true, // replace with PropTypes.object if you use them
+    router: PropTypes.object // replace with PropTypes.object if you use them
   }
 
   constructor(props) {
@@ -47,6 +49,7 @@ class ButtonPusher extends Component {
       chat:'',
       pathname:" ",
       home:false,
+      visible:' '
     };
   }
 
@@ -79,7 +82,7 @@ class ButtonPusher extends Component {
   	{this.props.chat == 'true' ?
   	this.setState({chat:'chat'}) : ''}
 
-    if(pathname == "home"){
+    if(pathname == "Home"){
       this.setState({
       home: true,
     });
@@ -180,6 +183,45 @@ class ButtonPusher extends Component {
     });
     }
 
+    if(pathname == "Recommander"){
+      this.setState({
+      pathname: "Recommander",
+    });
+    }
+
+    if(pathname == "Dons"){
+      this.setState({
+      pathname: "Faire un don",
+    });
+    }
+
+     if(pathname == "ValidationDon"){
+      this.setState({
+      pathname: "Validation",
+    });
+    }
+
+    if(pathname == "singleMessage"){
+      this.setState({
+      pathname: "Message",
+    });
+    }
+
+    if(pathname == "Chat"){
+      this.setState({
+      pathname: "Messagerie",
+    });
+    }
+
+    if(pathname == "ChatMobile"){
+      this.setState({
+      pathname: "Discussion",
+    });
+      this.setState({
+      visible: 'none',
+    });
+    }
+
   }
 
 
@@ -206,7 +248,7 @@ class ButtonPusher extends Component {
               {this.state.pathname}
           </div>
     			
-  			    <div className={this.state.chat + " "+ "pusher"}>
+  			    <div className={this.state.visible + " "+ "pusher"}>
               <div className="buttonSearch">
                 <Search />
               </div>         

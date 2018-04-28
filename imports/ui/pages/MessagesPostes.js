@@ -41,7 +41,7 @@ class Home extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {

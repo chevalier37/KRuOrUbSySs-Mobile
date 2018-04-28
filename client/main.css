@@ -37,9 +37,15 @@ header {
 	background-color: #e9ebee;
 	display: block;
 	min-height: 17500px;
+}
+
+.containerSiteChat{
 
 }
 
+.ChatMobileDiscussion{
+	margin-top: 330px;
+}
 
 .headerSite{
 	height: 60px;
@@ -385,9 +391,15 @@ header {
 	
 
 .repondreMessage{
+	margin-top: 10px;
+}
+
+.repondreMessageHome{
 	float: right;
-	/*margin-top: -10px;*/
-	display: inline-block;
+}
+
+.addFavoris{
+	margin-top: 10px;
 }
 
 .signaler{
@@ -606,17 +618,16 @@ header {
 
 .MainContentChat{
     height: 100%;
-    margin-left: 210px;
-    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
     position: fixed;
     left: 0px;
+    width: 100%;
 }
 
 .ChatContactLeft{
-	float: left;
-    /* width: 150px; */
     height: 500px;
-    margin-top: 50px;
+    margin-top: -10px;
     overflow: auto;
 }
 
@@ -629,11 +640,11 @@ header {
 
 .ValideChat{
 	position: fixed;
-	bottom: 0px;
-	background-color: yellow;
-	margin-left: 200px;
-	height: 150px;
-
+    bottom: 0px;
+    left: 0px;
+    /* margin-right: 5px; */
+    /* margin-left: 210px; */
+    width: 100%;
 }
 
 .ValideChatTest{
@@ -650,14 +661,13 @@ header {
 .ContentDiscussion{
 	background-color: white;
     background-color: white;
-    height: 100%;
+    height: 400px;
     padding-left: 10px;
     overflow: auto;
-    position: fixed;
-    padding-right: 4%;
-    width: 85%;
-    padding-bottom: 350px;
-    
+    /* position: fixed; */
+    /*padding-right: 4%;*/
+    /* width: 100%; */
+    padding-bottom: 50px;
 }
 
 .messageRight{
@@ -869,6 +879,7 @@ header {
 .vote{
 	color: green;
 	margin-right: 10px;
+	float: right;
 }
 
 .consigne{
@@ -945,16 +956,16 @@ header {
 
 .valideChatForm{
 	position: fixed;
-    bottom: 0px;
-    left: 10px;
+    bottom: 35px;
+    left: 0px;
     margin-right: 5px;
-    margin-left: 210px;
+    /* margin-left: 210px; */
     width: 100%;
 }
 
 .valideChatArea{
 	width: 100%;
-	margin-top: 10px;
+    margin-top: 3px;
 }
 
 .AffficheDiscussion{
@@ -966,7 +977,9 @@ header {
 	background-color: #e9ebee;
 	border-bottom-style: solid;
 	border-bottom-color: black;
-	border-bottom-width: 1px;  
+	border-bottom-width: 1px;
+	height: 55px;
+	padding-top: 5px;  
 }
 
 .message_droite{
@@ -1023,8 +1036,10 @@ header {
 .headerChat{
 	height: 50px;
     padding-left: 20px;
-    /*background-color: white;*/
     margin-left: 10px;
+    margin-top: 35px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .display-linebreak {
@@ -1080,7 +1095,7 @@ header {
 }
 
 .espaceContact{
-	height: 30px;
+	height: 5px;
 }
 
 .LastConseilleresContent{
@@ -1137,9 +1152,12 @@ header {
 
 }
 
+.spaceProfil{
+	height: 10px;
+}
+
 .ButtonProfil{
-	float: right;
-	margin-top: -70px;
+	margin-top: 10px;
 }
 
 .ButtonProfil a{
@@ -1320,6 +1338,7 @@ header {
     overflow: visible;
     width: 60px;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .buttonMontant:hover{
@@ -1365,9 +1384,7 @@ header {
 }
 
 .PubLivre{
-	float: right;
 	margin-top: 80px;
-	margin-right: 100px;
 	font-size: 16px;
 }
 
@@ -1656,92 +1673,67 @@ header {
     margin-right: 10px;
 }
 
+.forgetBack{
+	float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white
+}
+
+.headerContactChat{
+	font-size: 16;
+	font-weight: bold;
+	color: black;
+}
+
 @media only screen and (max-width: 1800px) {
 
 	/*.ContentDiscussion{
 		width: 80%;
 	}*/
 
-	.valideChatForm {
-   	 padding-right: 20%;
-	}
 
-	.headerChat{
-		width: 1000px;
-	}
 
 
 }
 
 @media only screen and (max-width: 1180px) {
 
-	.valideChatForm {
-    	padding-right: 20%;
-	}
 
-	.headerChat{
-		width: 800px;
-	}
+
 }
 
 
 @media only screen and (max-width: 1080px) {
 
-	.ContentDiscussion{
-		padding-right: 9%;
-	}
+
 }
 
 @media only screen and (max-width: 980px) {
 
-	.valideChatForm {
-    	padding-right: 25%;
-	}
 }
 
 @media only screen and (max-width: 850px) {
 
-	.ContentDiscussion{
-		padding-right: 13%;
-	}
 
-	.valideChatForm {
-    	padding-right: 29%;
-	}
 
 
 }
 
 @media only screen and (max-height: 850px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 600px;
-	}
-
-
-
+	
 
 }
 
 @media only screen and (max-height: 800px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 550px;
-	}
+	
 
 	.MenuLeftLastConseiller{
 		height: 500px;
 		overflow: auto;
 	}
-
 
 }
 
@@ -1749,32 +1741,18 @@ header {
 
 @media only screen and (max-height: 750px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 500px;
-	}
+	
 
 	.MenuLeftLastConseiller{
 		height: 450px;
 		overflow: auto;
 	}
 
-
 }
 
 @media only screen and (max-height: 700px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 450px;
-	}
-
+	
 	.MenuLeftLastConseiller{
 		height: 400px;
 		overflow: auto;
@@ -1785,39 +1763,20 @@ header {
 
 @media only screen and (max-height: 650px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 400px;
-	}
-
+	
 
 }
 
 @media only screen and (max-height: 600px) {
 
 	.ContentDiscussion{
-		padding-bottom: 400px;
+		padding-bottom: 120px;
 	}
-
-	.ChatContactLeft{
-		height: 350px;
-	}
-
 
 }
 
 @media only screen and (max-height: 550px) {
 
-	.ContentDiscussion{
-		padding-bottom: 400px;
-	}
-
-	.ChatContactLeft{
-		height: 300px;
-	}
-
+	
 
 }

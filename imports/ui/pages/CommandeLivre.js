@@ -29,7 +29,7 @@ class Livre extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       
     }
 
     scrollToTop() {

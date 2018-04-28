@@ -11,9 +11,13 @@ import { Route, Redirect } from 'react-router';
 import Header1 from '../component/Header.js';
 import Footer from '../component/Footer.js';
 
-import FaArrow from 'react-icons/lib/fa/arrow-circle-left';
+import Arrow from 'react-icons/lib/fa/arrow-left';
 
 class forgotPassword extends Component {
+
+  static contextTypes = {
+    router: () => true, // replace with PropTypes.object if you use them
+  }
 
     constructor(props) {
     super(props);
@@ -129,8 +133,14 @@ class forgotPassword extends Component {
     return (
       <div className="container">
         <header>
-          <div className="containerSupHeader">
+          <div className="containerSupHeaderConnexion">
             <div className="containerHeader">
+              <div className="forgetBack">
+                <div className="goBack"
+                  onClick={this.context.router.history.goBack}>
+                    <Arrow />
+                </div>
+              </div>
               <Header1 />
             </div>
           </div>
@@ -206,7 +216,7 @@ class forgotPassword extends Component {
         </div>
                 
         <div className="containerFooter">    
-            <Footer />
+            
         </div>
                   
       </div>

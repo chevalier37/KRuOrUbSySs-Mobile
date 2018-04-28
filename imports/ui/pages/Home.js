@@ -70,41 +70,42 @@ class Home extends Component {
           </div>
         </header>
        
-        <Sidebar.Pushable >
-              <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='right'
-                visible={visible}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-                <ContentMenuRight />
-              </Sidebar>
+          <Sidebar.Pushable  >
+                <Sidebar
+                  animation='overlay'
+                  className="ListRight"
+                  direction='right'
+                  visible={visible}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                  
+                >
+                  <ContentMenuRight />
+                </Sidebar>
 
-               <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='left'
-                visible={this.state.visibleLeft}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-               <ContentMenuMobile />
-              </Sidebar>
-              
-              <Sidebar.Pusher>
-        
-                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
-                  <div className="containerIMG">
-                    <MainContent  />  
-                  </div> 
-                </div>
+                 <Sidebar
+                  animation='overlay'
+                  className="ListRight"
+                  direction='left'
+                  visible={this.state.visibleLeft}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                >
+                 <ContentMenuMobile />
+                </Sidebar>
+                
+                <Sidebar.Pusher >
+          
+                  <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
+                    <div className="containerIMG">
+                      <MainContent  />  
+                    </div> 
+                  </div>
 
-              </Sidebar.Pusher>
-        </Sidebar.Pushable>
+                </Sidebar.Pusher>
+          </Sidebar.Pushable>
         <FooterPage />
       </div>
     );

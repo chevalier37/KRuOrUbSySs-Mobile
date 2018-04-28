@@ -144,19 +144,19 @@ class ListeReponses extends Component {
 							<div className="repondreMessage" >
 
 								<span className="vote">
-									{this.props.message.votes}
+									<Button
+									 basic
+									 size="tiny"
+									 disabled={this.state.disabledVote}
+									 color='green'
+									 onClick={this.vote.bind(this)}
+									 >
+										<Vote />
+								    </Button>
 								</span>
 
 								<span className="vote">
-								<Button
-								 basic
-								 size="tiny"
-								 disabled={this.state.disabledVote}
-								 color='green'
-								 onClick={this.vote.bind(this)}
-								 >
-									<Vote />
-							    </Button>
+									{this.props.message.votes}
 								</span>
 
 								<Button
@@ -167,16 +167,18 @@ class ListeReponses extends Component {
 									Signaler
 								</Button>
 
-								<Button
-								 basic size="tiny"
-								 disabled={
-								 	this.props.isFavoris==true ||
-								    this.state.disabledFavoris==true ?
-								    true : false}
-								 color='blue'
-								 onClick={this.addFavoris.bind(this)}>
-									Ajouter au favoris
-								</Button>
+								<div className="addFavoris">
+									<Button
+									 basic size="tiny"
+									 disabled={
+									 	this.props.isFavoris==true ||
+									    this.state.disabledFavoris==true ?
+									    true : false}
+									 color='blue'
+									 onClick={this.addFavoris.bind(this)}>
+										Ajouter au favoris
+									</Button>
+								</div>
 							</div>
 	      				</Comment.Content>
 	    			</Comment>

@@ -10,6 +10,7 @@ import DevenirConseiller from '../../../imports/ui/pages/DevenirConseiller.js';
 import ResultatsConseiller from '../../../imports/ui/pages/ResultatsConseiller.js';
 import Profil from '../../../imports/ui/pages/Profil.js';
 import Chat from '../../../imports/ui/pages/Chat.js';
+import ChatMobile from '../../../imports/ui/pages/ChatMobile.js';
 import forgotPassword from '../../../imports/ui/pages/forgotPassword.js';
 import CGU from '../../../imports/ui/pages/CGU.js';
 import contact from '../../../imports/ui/pages/contact.js';
@@ -57,6 +58,7 @@ export const renderRoutes = () => (
       <Route path="/ResultatsConseiller/:theme" component={ResultatsConseiller}/>
       <Route path="/Profil/:id" component={Profil}/>
       <Route path="/Chat/:id" component={Chat}/>
+      <Route path="/ChatMobile/:id" component={ChatMobile}/>
       <Route path="/forgotPassword" component={forgotPassword}/>
       <Route path="/CGU" component={CGU}/>
       <Route path="/contact" component={contact}/>

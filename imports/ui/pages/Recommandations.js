@@ -40,7 +40,7 @@ class allRecommandations extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       
     }
 
     scrollToTop() {

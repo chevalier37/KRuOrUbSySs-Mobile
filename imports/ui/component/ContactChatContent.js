@@ -24,7 +24,7 @@ class ContactChatContent extends Component {
 
   handleContextRef = contextRef => this.setState({ contextRef })
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  //handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 	
 		componentWillMount(){
 			const user = Meteor.user();
@@ -67,29 +67,27 @@ class ContactChatContent extends Component {
 	    return (
 				<div className={"AffficheContact" + " "+this.state.message}  >
 					
-					<Link to={'/Chat/' + this.state.toId}>	
-					<div className={this.props.currentContact + " " + this.props.read} >
-						<Menu.Item
-				         onClick={this.handleItemClick}
-				         as='div'
-				         >
-				          <Menu.Header>
-					          <div className="deleteContact" onClick={this.delete.bind(this)} >
-						<FaClose />
-					</div>
-					          <div className={this.props.currentContact + " " + this.props.read}>
-					          {this.state.toName}
-						          <div className={this.props.isOnline == true ? "onlineChat" : "none"} >
-						         	<FaCircle />
+					<Link to={'/ChatMobile/' + this.state.toId}>	
+						<div className={this.props.currentContact + " " + this.props.read} >
+							<div
+					         onClick={this.handleItemClick}
+					         >
+					          <div className="headerContactChat" >
+						        <div className="deleteContact" onClick={this.delete.bind(this)} >
+									<FaClose />
+								</div>
+						          <div className={this.props.currentContact + " " + this.props.read}>
+						          {this.state.toName}
+							          <div className={this.props.isOnline == true ? "onlineChat" : "none"} >
+							         	<FaCircle />
+							          </div>
 						          </div>
 					          </div>
-				          </Menu.Header>
 					          <div className={this.props.currentContact + " " + this.props.read + " " +"display-linebreak"}>
 					          	{this.breaklines()}
 					          </div>
-				        </Menu.Item>
-				       
-				       </div>
+					        </div>
+					     </div>
 				    </Link>
 	    		</div>
 	    )

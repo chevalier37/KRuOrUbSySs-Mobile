@@ -4,6 +4,10 @@ import { check } from 'meteor/check';
 
 export const Notifications = new Mongo.Collection('notifications');
 import { Posts } from './Messages.js';
+import { Comments } from './Reponses.js';
+import { Dons } from './Stripe.js';
+import { Recommandations } from './Recommandations.js';
+import { Chat } from './Chat.js';
 
 if (Meteor.isServer) {
 
@@ -149,6 +153,13 @@ Meteor.methods({
                 });
 
      },
+
+     readNotif: function() {
+          Comments.update({post_author_id:this.userId, read:false},{ $set: { "read": true} })
+          Recommandations.update({to_id:this.userId, read:false}, { $set: { "read": true} })
+          Dons.update({to_id:this.userId, read:false}, { $set: { "read": true} })
+          Chat.update({to_id:this.userId, read:false}, { $set: { "read": true} })
+       },
 
 });
 

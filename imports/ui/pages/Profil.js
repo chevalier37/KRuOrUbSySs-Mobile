@@ -42,7 +42,7 @@ class Profil extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       
     }
 
     scrollToTop() {

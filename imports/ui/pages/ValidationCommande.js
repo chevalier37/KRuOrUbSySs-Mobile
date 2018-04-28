@@ -26,7 +26,7 @@ class commandeEffectuer extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {

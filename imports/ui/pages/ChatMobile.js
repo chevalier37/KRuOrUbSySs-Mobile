@@ -20,26 +20,18 @@ import FaList from 'react-icons/lib/fa/list';
 
 import { Chat } from '../../api/Chat.js';
 
-class chat extends Component {
+class chatMobile extends Component {
 
     constructor(props) {
         super(props);
-     
         this.state = {
           username:'',
           naissance:'',
           update:false,
           gender:'',
           visibleLeft:false,
+          visible: false, 
         };
-    }
-
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
-    
-    toggleHidden() {
-      this.setState({ visible: false });
-      this.setState({ visibleLeft: false });
     }
 
     renderAllChat() {
@@ -57,6 +49,14 @@ class chat extends Component {
             );
           });
     }
+
+    toggleVisibility = () => this.setState({ visible: !this.state.visible })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentWillReceiveProps(){
          this.setState({update: false})
@@ -114,7 +114,7 @@ class chat extends Component {
 
     return (
       <div className="container">
-         <header>
+        <header>
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
@@ -123,72 +123,71 @@ class chat extends Component {
                onClick={this.toggleVisibility}>
                <ButtonPusher />
                </span>
-              
-              <span
-               className="buttonPushMobile"
-               onClick={this.VisibilityLeft}>
-               <FaList />
-               </span>
               <HeaderPage />
             </div>
             </div>
           </div>
-        </header>
-
-        <Sidebar.Pushable >
-              <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='right'
-                visible={visible}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-                <ContentMenuRight />
-              </Sidebar>
-
-               <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='left'
-                visible={this.state.visibleLeft}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-               <ContentMenuMobile />
-              </Sidebar>
-              
-              <Sidebar.Pusher>
-                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
-                  <div className="containerIMG">
-                    <div className="MainContent">     
-                      <div className="containerContactChat"  >
-                        <ContactChat to_id = {this.props.match.params.id}  />
+        </header>        
+            <div className="containerSiteChat" onClick={this.toggleHidden.bind(this)}>
+              <div className="containerChat">
+                <div className="containerDiscussion">
+                  <div className="MainContentChat">
+                    <div className="headerChat">
+                      <div className={"ChatUsername" + " " + this.state.gender}>
+                          <Link to={'/Profil/' + this.props.match.params.id}>
+                          {this.state.username}
+                          </Link>
                       </div>
-                    </div>    
-                  </div> 
+                      <div className="ChatAge">  
+                          {this.state.naissance} ans
+                      </div>
+                      <br/>
+                      <div className="recommmander">
+                          <Link to={'/Recommander/' + this.props.match.params.id}>    
+                            <Button
+                             size='mini'
+                             inverted
+                             color='green' >
+                              Recommander
+                            </Button>
+                          </Link>
+                      </div>
+                      <div className="FaireDon">
+                        <Link to={'/Dons/' + this.props.match.params.id}>  
+                            <Button
+                             size='mini'
+                             inverted
+                             color='red' >
+                             Faire un don
+                            </Button>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="ContentDiscussion">
+                       {this.renderAllChat()}
+                      <FormChat to_id = {this.props.match.params.id} />
+                    </div>
+                  </div>
                 </div>
-              </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      <FooterPage />
+              </div> 
+            </div> 
+        <FooterPage />
       </div>
     );
   }
 }
 
 
-export default chat =  withTracker(({ match }) => {
+export default chatMobile =  withTracker(({ match }) => {
   const to_id = match.params.id;
   const from_id = Meteor.userId();
   const Handle = Meteor.subscribe('Chat', to_id, from_id);
   const loading = !Handle.ready();
-  const allreponses = Chat.find({$or : [{from_id: from_id, to_id:to_id}, {from_id: to_id, to_id:from_id}]});
+  const allreponses = Chat.find({$or : [{from_id: from_id, to_id:to_id}, {from_id: to_id, to_id:from_id}]}, { sort: {post_date: 1 } });
   const reponseExists = !loading && !!allreponses;
   let username = '';
 
   return {
     allChat: reponseExists ? allreponses.fetch() : [],
   };
-})(chat);
+})(chatMobile);

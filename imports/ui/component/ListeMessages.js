@@ -423,7 +423,7 @@ class ListeMessages extends Component {
 							
 							<br />
 							
-							<div className="repondreMessage">
+							<div className="repondreMessageHome">
 	          					<Link to={'/singleMessage/' + this.props.message._id} >
 	          						<Button  size="tiny" color="green">
 	          							Aider
@@ -439,7 +439,7 @@ class ListeMessages extends Component {
 
 							<div className="Signaler" >
 								<Button basic size="tiny" color='blue'>
-									<Link to={'/Chat/' + this.props.message.post_author_id }>
+									<Link to={'/ChatMobile/' + this.props.message.post_author_id }>
 									Message privé
 									</Link>
 								</Button>

@@ -33,7 +33,7 @@ class SupprimerCompte extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {

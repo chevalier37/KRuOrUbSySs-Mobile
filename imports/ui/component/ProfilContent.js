@@ -1209,6 +1209,7 @@ class ProfilContent extends Component {
 
               	 		<div className="recommandations">
 	              	 		<Button
+	              	 			size="mini"
 	              	 			 inverted
 								 color='blue'>
 									 <Link to={'/Recommandations/'+ this.props.id }>	
@@ -1224,24 +1225,27 @@ class ProfilContent extends Component {
 										}
 						>
 							<Button
-							 inverted
-							 color='brown'>
-								 <Link to={'/Chat/'+ this.props.id }>	
+							size="mini"
+							inverted
+							color='brown'>
+								 <Link to={'/ChatMobile/'+ this.props.id }>	
 								 	Contacter
 								 </Link>
 							 </Button>
-
+							 <div className="spaceProfil"></div>
 							<Button
-							 inverted 
-							 color='green'>
+							size="mini"
+							inverted 
+							color='green'>
 								 <Link to={'/Recommander/'+ this.props.id }>	
 								 	Recommander
 								 </Link>
 							 </Button>
 
 							<Button
-							 inverted
-							 color='red'>
+							size="mini"
+							inverted
+							color='red'>
 							 <Link to={'/Dons/'+ this.props.id }>
 							 	Faire un don
 							 </Link>

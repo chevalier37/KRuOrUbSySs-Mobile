@@ -12,6 +12,10 @@ import ContentMenuRight from '../component/ContentMenuRight.js';
 import ButtonPusher from '../component/ButtonPusher.js';
 import ContentMenuLeft from '../component/ContentMenuLeft.js';
 
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import FooterPage from '../component/FooterPage.js';
+import FaList from 'react-icons/lib/fa/list'; 
+
 //Stripe
 import {StripeProvider} from 'react-stripe-elements';
 import MyStoreCheckout from '../component/MyStoreCheckout.js';
@@ -23,7 +27,8 @@ class Dons extends Component {
         this.state = {
         visible: false,
         stripe: null,
-        username:''
+        username:'',
+        visibleLeft:false, 
         }
     }
 
@@ -32,7 +37,7 @@ class Dons extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {
@@ -40,7 +45,12 @@ class Dons extends Component {
     }
 
     toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     componentWillMount(){
       let id = this.props.match.params.id;
@@ -79,13 +89,18 @@ class Dons extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
                onClick={this.toggleVisibility}>
-
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -103,10 +118,22 @@ class Dons extends Component {
               >
                 <ContentMenuRight />
               </Sidebar>
+
+               <Sidebar
+                animation='overlay'
+                className="ListRight"
+                direction='left'
+                visible={this.state.visibleLeft}
+                icon='labeled'
+                vertical
+                className="SidebarUI"
+              >
+               <ContentMenuMobile />
+              </Sidebar>
               
               <Sidebar.Pusher>
         
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
                   <ContentMenuLeft />
                   <div className="MainContent">
@@ -140,6 +167,7 @@ class Dons extends Component {
 
               </Sidebar.Pusher>
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

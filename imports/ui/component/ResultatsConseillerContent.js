@@ -77,8 +77,8 @@ class ResultatsConseillerContent extends Component {
         return (
           	<Table.Row key={conseiller._id}>
 				<Table.Cell>
+				<Link to={'/ChatMobile/' + conseiller.user_id}>
 				<div className={conseiller.gender}>
-					<Link to={'/Chat/' + conseiller.user_id}>
 						{conseiller.username}
 						<br />
 						{age} ans<br />
@@ -88,7 +88,7 @@ class ResultatsConseillerContent extends Component {
 	          			disabled
 	          			size='mini'
 	          	 		/>
-          	 		</Link>
+          	 		
 				</div>
 				<div className={this.props.premierAmourText}>
               	<div className="display-linebreak textConseillere">{conseiller.premierAmourText}</div>
@@ -201,6 +201,7 @@ class ResultatsConseillerContent extends Component {
               	<div className={this.props.ViolenceText}>
               	<div className="display-linebreak textConseillere">{conseiller.ViolenceText}</div>
 				</div>
+				</Link>
 				</Table.Cell>
 			</Table.Row>
         );
@@ -220,26 +221,30 @@ class ResultatsConseillerContent extends Component {
         
         return (
           	<Table.Row key={conseiller._id}>
+				
 				<Table.Cell>
-				<div className={conseiller.gender}>
-					<Link to={'/Chat/' + conseiller.user_id}>
-						{conseiller.username}
-						<br />
-						{age} ans<br />
-						<Rating icon='heart'
-	          			defaultRating={conseiller.note}
-	          			maxRating={4}
-	          			disabled
-	          			size='mini'
-	          	 		/>
-          	 		</Link>
-				</div>
+					<Link to={'/ChatMobile/' + conseiller.user_id}>
+						<div className={conseiller.gender}>
+								{conseiller.username}
+								<br />
+								{age} ans<br />
+								<Rating icon='heart'
+			          			defaultRating={conseiller.note}
+			          			maxRating={4}
+			          			disabled
+			          			size='mini'
+			          	 		/>
+						</div>
+					</Link>
 				</Table.Cell>
               	<Table.Cell>
-	              	<div className="display-linebreak textConseillere">
-	              		{conseiller.presentation}
-	              	</div>
+	              	<Link to={'/ChatMobile/' + conseiller.user_id}>
+		              	<div className="display-linebreak textConseillere">
+		              		{conseiller.presentation}
+		              	</div>
+					</Link>
               	</Table.Cell>
+              
 			</Table.Row>
         );
       });

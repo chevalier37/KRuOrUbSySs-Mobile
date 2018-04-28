@@ -86,7 +86,11 @@ class FormChat extends Component {
 		return (
 			<div className="valideChatForm">
 			    <Form onSubmit={this.Submit.bind(this)}>
-			      <Button fluid color="green"  >
+			      <Button
+			       fluid
+			       siez='tiny'
+			       color="green"
+			         >
 				    	Envoyer 
 				    </Button>
 			    						    
@@ -97,7 +101,7 @@ class FormChat extends Component {
 				       onFocus={this.focusMessage.bind(this)}
 				       onBlur={this.focusMessageOut.bind(this)}
 				       placeholder={placeholderMessage}
-				       rows={8}
+				       rows={5}
 				       />
 					</div>
 		  		</Form>

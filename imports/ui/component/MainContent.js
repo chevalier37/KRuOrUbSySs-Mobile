@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Segment, Button, Checkbox, Form, Header, TextArea } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
-
+import AdSense from 'react-adsense';
 import FormPosterMessage from './FormPosterMessage.js';
 import ListeMessages from './ListeMessages.js';
 
@@ -281,6 +281,13 @@ class MainContent extends Component {
 				       </Button>
 				    </div>
 	  			</Segment>
+
+				<div className="espacePub" ></div>
+			        <AdSense.Google
+			          client='ca-pub-6112176939320267'
+			          slot='3735932470'
+			          style={{ display: 'inline-block',width:'320px', height:'50px'}}
+					/>
 
 	  			<div className={this.state.allMessages}>
 	  				{this.renderAllMessages()}

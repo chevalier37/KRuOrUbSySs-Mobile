@@ -53,15 +53,25 @@ class ListeDonsContent extends Component {
         return (
           	<Table.Row key={dons._id}>
 				<Table.Cell>
-				<div className={dons.to_gender}>
-					<Link to={'/Chat/' + dons.to_id}>
-						{dons.to_name}
-					</Link>
-				</div>
+				<Link to={'/ChatMobile/' + dons.to_id}>
+					<div className={dons.to_gender}>
+						
+							{dons.to_name}
+						
+					</div>
+				</Link>
 				</Table.Cell>
-	            <Table.Cell>{dons.montantTotal}€</Table.Cell>
+	            <Table.Cell>
+	            <Link to={'/ChatMobile/' + dons.to_id}>
+	            {dons.montantTotal}€
+	            </Link>
+	            </Table.Cell>
 
-              	<Table.Cell >{dons.message}</Table.Cell>
+              	<Table.Cell >
+              	<Link to={'/ChatMobile/' + dons.to_id}>
+              	{dons.message}
+              	</Link>
+              	</Table.Cell>
               
 			</Table.Row>
         );
@@ -75,16 +85,22 @@ class ListeDonsContent extends Component {
         return (
           	<Table.Row key={dons._id}>
 				<Table.Cell>
-				<div className={dons.from_gender}>
-					<Link to={'/Chat/' + dons.from_id}>
-						{dons.from_name}
-					</Link>
-				</div>
+				<Link to={'/ChatMobile/' + dons.from_id}>
+					<div className={dons.from_gender}>
+							{dons.from_name}
+					</div>
+				</Link>
 				</Table.Cell>
               	<Table.Cell>
-              	{dons.montantPercu}€
+	              	<Link to={'/ChatMobile/' + dons.from_id}>
+	              	{dons.montantPercu}€
+	              	</Link>
               	</Table.Cell>
-              	<Table.Cell>{dons.message}</Table.Cell>
+              	<Table.Cell>
+	              	<Link to={'/ChatMobile/' + dons.from_id}>
+	              	{dons.message}
+	              	</Link>
+              	</Table.Cell>
 			</Table.Row>
         );
       });

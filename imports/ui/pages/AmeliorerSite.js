@@ -40,7 +40,7 @@ class AmelioreSite extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       
     }
 
     scrollToTop() {

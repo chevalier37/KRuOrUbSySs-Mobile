@@ -34,7 +34,7 @@ class allFavoris extends Component {
     }
 
     componentDidMount() {
-        this.scrollToTop();
+        
     }
 
     componentDidUpdate() {

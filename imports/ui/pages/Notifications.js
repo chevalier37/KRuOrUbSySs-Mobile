@@ -44,10 +44,11 @@ class allNotifications extends Component {
 
     componentDidMount() {
         this.scrollToTop();
+        Meteor.call('readNotif'); 
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       Meteor.call('readNotif'); 
     }
 
     scrollToTop() {
@@ -73,7 +74,9 @@ class allNotifications extends Component {
                  ''}
 
                 },
-        })   
+        })
+
+        Meteor.call('readNotif');   
       }
 
     renderAllreponses() {
@@ -153,8 +156,6 @@ class allNotifications extends Component {
                 <div className="containerSite" onClick={this.toggleHidden}>
                     <div className="containerIMG">
                       <div className="MainContent">
-                        <Segment>
-                        </Segment>
                          {this.renderAllreponses()}
                       </div>    
                     </div> 

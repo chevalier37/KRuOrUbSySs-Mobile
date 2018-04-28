@@ -26,7 +26,7 @@ class ConfirmationVirement extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+       
     }
 
     scrollToTop() {

@@ -172,7 +172,7 @@ class ListeNotifications extends Component {
 		              	 			/>
 		              	 		</div>
 							</div>
-
+							<div className='spaceProfil'></div>
 	         				<div className="supprimerFavoris">
 		         				<Button
 		         					size="mini"

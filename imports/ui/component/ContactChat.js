@@ -58,16 +58,11 @@ class contactChat extends Component {
 		return (
 			
 		      	<div className="ChatContactLeft">
-  					 <Menu vertical>
-      					<div
-      					 className="HeaderLastConseiller"
-      					 >
-      					 Mes contacts
-      					 </div>
+  					 <div>
                  <div className="espaceContact">
                  </div>
   				        {this.renderAllContactChat()}
-  			      </Menu>
+  			      </div>
 				    </div>
 		);
   }

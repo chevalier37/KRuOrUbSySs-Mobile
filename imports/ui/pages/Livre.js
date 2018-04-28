@@ -43,7 +43,7 @@ class Livre extends Component {
     }
 
     componentDidUpdate() {
-        this.scrollToTop();
+        
     }
 
     scrollToTop() {
@@ -131,8 +131,9 @@ class Livre extends Component {
                       </div>
                       <div  className="textCendrillon">
                       <br /><br />  <br /><br />
-                      <div className="center titre">
-                        À tous ceux qui croient en leurs rêves.
+                      <div className="titre">
+                         À tous ceux <br />
+                         qui croient en leurs rêves.
                       </div><br /><br />
 
                       <div className="right">
