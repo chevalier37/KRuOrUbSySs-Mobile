@@ -57,7 +57,7 @@ export default class ContentMenuRight extends Component {
 				    <Link to={'/Favoris/' }>
 					    <List.Item className="ListItem">
 						    <List.Header>
-                     		<p className="colorIconBlue"><FaStar /></p>
+                     		<p className="colorIconBlack"><FaStar /></p>
     				        <p className="menuIcon"> Favoris</p>
 						    </List.Header>
 					    </List.Item>
@@ -68,7 +68,7 @@ export default class ContentMenuRight extends Component {
 				      <Link to={'/MessagesPostes/' }>
 					    <List.Item className="ListItem">
 					    	<List.Content>
-                   			 <p className="colorIconBlue"><FaEnvelope /></p>
+                   			 <p className="colorIconBlack"><FaEnvelope /></p>
     				         <p className="menuIcon"> Messages postés</p>
 					      </List.Content>
 					    </List.Item>
@@ -79,7 +79,7 @@ export default class ContentMenuRight extends Component {
   					 <Link to={'/ListeDons/' + Meteor.userId() }>
 					    <List.Item className="ListItem">
 					    	<List.Content>
-                    		<p className="colorIconBlue"><FaEur /> </p>
+                    		<p className="colorIconBlack"><FaEur /> </p>
     				        <p className="menuIcon"> Dons</p>
 					      </List.Content>
 					    </List.Item>
@@ -90,12 +90,13 @@ export default class ContentMenuRight extends Component {
   					  <Link to={'/Livre/'}>  
 					    <List.Item className="ListItem">
 					    	<List.Content>
-					        	<p className="colorIconBlue"><Book /></p>
-    			         		<p className="menuIcon">Le Secret de Cendrillon</p>
+					        	<p className="colorIconBlack"><Book /></p>
+    			         		<p className="menuIcon">Livre</p>
 					      </List.Content>
 					    </List.Item>
 				    </Link> 
 				    
+  					 <Divider />
   					 <Divider />
 
 				     <Link to={'/AmeliorerSite/'}> 
@@ -142,6 +143,7 @@ export default class ContentMenuRight extends Component {
 				    </Link>
 
 				      <Divider />
+				      <Divider />
 
 				    <Link to={'/SupprimerCompte/'}> 
 					    <List.Item className="ListItem">
@@ -152,6 +154,7 @@ export default class ContentMenuRight extends Component {
 					    </List.Item>
 				    </Link>
 
+				      <Divider />
 				      <Divider />
 				   
 				   

@@ -6,13 +6,15 @@ import { Link } from 'react-router-dom';
 import { Sidebar, Segment, Button, Icon, Header, Divider } from 'semantic-ui-react'
 import { Route, Redirect } from 'react-router';
 import Img from 'react-image'
- 
+ import FaList from 'react-icons/lib/fa/list'; 
+
 //Component
 import HeaderPage from '../component/HeaderPage.js';
-import ContentMenuRight from '../component/ContentMenuRight.js';
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
 import ButtonPusher from '../component/ButtonPusher.js';
 import ContentMenuLeft from '../component/ContentMenuLeft.js';
-
+import FooterPage from '../component/FooterPage.js';
+import ContentMenuRight from '../component/ContentMenuRight.js';
 //Stripe
 import {StripeProvider} from 'react-stripe-elements';
 import MyStoreCheckoutLivre from '../component/MyStoreCheckoutLivre.js';
@@ -21,15 +23,20 @@ class Livre extends Component {
 
     state = { visible: false }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
+    toggleVisibility(){
+      this.scrollToTop();
+      this.setState({ visible: !this.state.visible  })
+    } 
+
+    VisibilityLeft(){
+      this.scrollToTop();
+      this.setState({ visibleLeft: !this.state.visibleLeft  })
+    } 
+
     toggleHidden = () => this.setState({ visible: false })
 
     componentDidMount() {
         this.scrollToTop();
-    }
-
-    componentDidUpdate() {
-       
     }
 
     scrollToTop() {
@@ -53,13 +60,18 @@ class Livre extends Component {
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
-               onClick={this.toggleVisibility}>
-
+               onClick={this.toggleVisibility.bind(this)}>
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft.bind(this)}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -68,20 +80,35 @@ class Livre extends Component {
        
         <Sidebar.Pushable >
               <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='right'
-                visible={visible}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-                <ContentMenuRight />
-              </Sidebar>
+                  animation='overlay'
+                  className="ListRight"
+                  direction='right'
+                  visible={visible}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                  
+                >
+                <div ref={el => { this.el = el; }} ></div>
+                  <ContentMenuRight />
+                </Sidebar>
+
+                 <Sidebar
+                  animation='overlay'
+                  className="ListRight"
+                  direction='left'
+                  visible={this.state.visibleLeft}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                >
+                <div ref={el => { this.el = el; }} ></div>
+                 <ContentMenuMobile />
+                </Sidebar>
               
               <Sidebar.Pusher>
         
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
                     <ContentMenuLeft />
                     <div className="MainContent">
@@ -116,7 +143,7 @@ class Livre extends Component {
               </Sidebar.Pusher>
 
         </Sidebar.Pushable>
-      
+      <FooterPage />
       </div>
     );
   }

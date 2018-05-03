@@ -17,6 +17,7 @@ class ListeReponses extends Component {
 			    disabled:false,
 			    disabledVote:false,
 			    disabledFavoris:false,
+			    color:true
 		    };
 		}
 
@@ -38,6 +39,7 @@ class ListeReponses extends Component {
 	 vote() {
 	    Meteor.call('vote', this.props.message._id);
        	this.setState({disabledVote: true});
+       	this.setState({color: false});
 	 }
 
 	componentWillMount(){
@@ -67,10 +69,8 @@ class ListeReponses extends Component {
 		const nbrMois = Math.round(nbrJours/30);
 		this.setState({nbrMois: nbrMois})
 
-
-		{
-		Meteor.userId() && _.include(this.props.message.upvoters, Meteor.userId()) ?
-       	this.setState({disabledVote: true}) :
+		if(Meteor.userId() && _.include(this.props.message.upvoters, Meteor.userId())){
+       	this.setState({disabledVote: true}); this.setState({color: false})}else{
        	this.setState({disabledVote: false})
    		}
 
@@ -84,7 +84,6 @@ class ListeReponses extends Component {
    			this.props.isFavoris==true ?
    			this.setState({disabledFavoris: true}) :
        		this.setState({disabledFavoris: false})
-
    		}
 
 	}
@@ -145,7 +144,7 @@ class ListeReponses extends Component {
 
 								<span className="vote">
 									<Button
-									 basic
+									 basic={this.state.color}
 									 size="tiny"
 									 disabled={this.state.disabledVote}
 									 color='green'
@@ -167,6 +166,14 @@ class ListeReponses extends Component {
 									Signaler
 								</Button>
 
+								<div className="Signaler" >
+									<Button basic size="tiny" color='blue'>
+										<Link to={'/ChatMobile/' + this.props.message.userId }>
+										Message privé
+										</Link>
+									</Button>
+								</div>
+
 								<div className="addFavoris">
 									<Button
 									 basic size="tiny"
@@ -174,7 +181,7 @@ class ListeReponses extends Component {
 									 	this.props.isFavoris==true ||
 									    this.state.disabledFavoris==true ?
 									    true : false}
-									 color='blue'
+									 color='green'
 									 onClick={this.addFavoris.bind(this)}>
 										Ajouter au favoris
 									</Button>

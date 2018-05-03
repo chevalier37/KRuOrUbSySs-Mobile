@@ -21,7 +21,7 @@ header {
     /* width: 900px; */
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
+    margin-bottom: 50px;
 }
 
 
@@ -36,7 +36,6 @@ header {
 .containerSite{
 	background-color: #e9ebee;
 	display: block;
-	min-height: 17500px;
 }
 
 .containerSiteChat{
@@ -153,10 +152,9 @@ header {
 }
 
 .slogan{
-	font-size: 25px;
+	font-size: 20px;
 	color: black;
 	font-weight: bold;
-	width: 410px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -198,13 +196,13 @@ header {
 
 .sincrire{
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 20px;
 	margin-bottom: 5px;
 }
 
 .loginText{
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 20px;
 	margin-bottom: 5px;
 	margin-top: 25px;
 	margin-bottom: 15px;
@@ -626,7 +624,6 @@ header {
 }
 
 .ChatContactLeft{
-    height: 500px;
     margin-top: -10px;
     overflow: auto;
 }
@@ -753,6 +750,18 @@ header {
     padding-top: 4px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.filleNotif{
+	color: #fd9fd4;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.garconNotif{
+	color: #79c6ff;
+	display: inline-block;
+	margin-left: 3px;
 }
 
 .garconMessageBackground{
@@ -978,8 +987,9 @@ header {
 	border-bottom-style: solid;
 	border-bottom-color: black;
 	border-bottom-width: 1px;
-	height: 55px;
-	padding-top: 5px;  
+	height: 65px;
+	padding-top: 5px;
+	overflow: hidden;  
 }
 
 .message_droite{
@@ -1095,7 +1105,7 @@ header {
 }
 
 .espaceContact{
-	height: 5px;
+	height: 15px;
 }
 
 .LastConseilleresContent{
@@ -1248,8 +1258,7 @@ header {
 }
 
 .supprimerFavoris{
-	/*float: right;*/
-	margin-top: -5px;
+	margin-top: 5px;
 }
 
 .AjouterReponse{
@@ -1409,13 +1418,11 @@ header {
 }
 
 .imgLivreCommande{
-	margin-left: 100px;
+
 }
 
 .prix{
-	float: right;
-	margin-top: -200px;
-	margin-right: 100px;
+
 }
 
 .ItemChatNotif{
@@ -1683,6 +1690,20 @@ header {
 .headerContactChat{
 	font-size: 16;
 	font-weight: bold;
+	color: black;
+}
+
+.trier{
+	display: inline-block;
+	margin-bottom: 3px;
+	margin-left: 3px;
+}
+
+.ok{
+	color: black;
+}
+
+.ok a{
 	color: black;
 }
 

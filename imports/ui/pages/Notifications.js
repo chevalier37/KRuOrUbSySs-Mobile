@@ -34,8 +34,15 @@ class allNotifications extends Component {
         }
     }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    toggleVisibility(){
+      this.scrollToTop();
+      this.setState({ visible: !this.state.visible  })
+    } 
+
+    VisibilityLeft(){
+      this.scrollToTop();
+      this.setState({ visibleLeft: !this.state.visibleLeft  })
+    } 
     
     toggleHidden() {
       this.setState({ visible: false });
@@ -112,13 +119,13 @@ class allNotifications extends Component {
             <div className="headerPage">
               <span
                className="buttonPush"
-               onClick={this.toggleVisibility}>
+               onClick={this.toggleVisibility.bind(this)}>
                <ButtonPusher />
                </span>
               
               <span
                className="buttonPushMobile"
-               onClick={this.VisibilityLeft}>
+               onClick={this.VisibilityLeft.bind(this)}>
                <FaList />
                </span>
               <HeaderPage />
@@ -137,6 +144,7 @@ class allNotifications extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                 <ContentMenuRight />
               </Sidebar>
 
@@ -149,11 +157,12 @@ class allNotifications extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                <ContentMenuMobile />
               </Sidebar>
               
               <Sidebar.Pusher>
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                     <div className="containerIMG">
                       <div className="MainContent">
                          {this.renderAllreponses()}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
-import {  Input, Label, Menu, Grid, Header, Image, Rail, Segment, Sticky, Icon  } from 'semantic-ui-react'
+import {  Input, Label, Menu, Grid, Header, Image, Rail, Segment, Divider, Icon  } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 import ContactChatContent from '../component/ContactChatContent.js';
@@ -60,6 +60,7 @@ class contactChat extends Component {
 		      	<div className="ChatContactLeft">
   					 <div>
                  <div className="espaceContact">
+                 <Divider />
                  </div>
   				        {this.renderAllContactChat()}
   			      </div>

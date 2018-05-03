@@ -8,6 +8,8 @@ import { EmailDons } from '../../server/email-dons.js';
 
 Meteor.startup(() => {
    process.env.MAIL_URL = "smtp://SMTP_Injection:8a7c33dbc3fcb19d1d3610321e91d649f28b1441@smtp.sparkpostmail.com:587";
+   process.env.MONGO_URL='mongodb://jbr:Rocky159*@ds145919-a0.mlab.com:45919,ds145919-a1.mlab.com:45919/kurbys?replicaSet=rs-ds145919';
+   process.env.MONGO_OPLOG_URL= 'mongodb://jbr:Rocky159*@ds145919-a0.mlab.com:45919,ds145919-a1.mlab.com:45919/local?replicaSet=rs-ds145919&authSource=admin';
 });
 
 if (Meteor.isServer) {

@@ -43,7 +43,20 @@ Meteor.methods({
              : ''}
 
             const request = ContactChat.findOne({$or : [{from_id: this.userId, to_id:to_id}, {from_id: to_id, to_id:this.userId}]});
-             {to_id != this.userId ? 
+             {!request ?
+              ContactChat.insert({
+                from_id: this.userId,
+                to_id:to_id,
+                last_message:message,
+                from_name: from_name,
+                to_name: to_name,
+                date: new Date(),
+                read:false,
+                authorLastMessage:this.userId,
+              }) : ""
+             }
+
+             {request && to_id != this.userId ? 
             ContactChat.update(request._id, {$set: {last_message:message, read:false, authorLastMessage:this.userId, date} })
              : ''}
       },
@@ -56,7 +69,7 @@ Meteor.methods({
             const searchContact = ContactChat.findOne({$or : [{from_id: this.userId, to_id:to_id.to_id}, {from_id: to_id.to_id, to_id:this.userId}]});
             
 
-            {searchContact.authorLastMessage && searchContact.authorLastMessage != this.userId ?
+            {searchContact && searchContact.authorLastMessage != this.userId ?
               ContactChat.update(searchContact._id, {$set: {read:true} }) : ''}
 
             const searchMessage = Chat.find({$or : [{from_id: to_id.to_id, to_id:this.userId}]});

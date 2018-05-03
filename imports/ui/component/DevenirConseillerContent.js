@@ -985,8 +985,6 @@ export default class DevenirConseillerContent extends Component {
 				</div>
 			<div className={this.state.IsConseiller ? 'none' : ''}>
 				<Segment className="MainContent">
-					<Divider />
-
 					<p className="consigne">Remplis soigneusement ce formulaire afin de devenir conseiller.</p>
 					<p className="consigne">
 					Tous le monde pourra te contacter afin d'obtenir de l'aide dans les domaines que tu auras choisis.

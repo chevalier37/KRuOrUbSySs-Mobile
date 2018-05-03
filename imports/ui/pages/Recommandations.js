@@ -39,16 +39,20 @@ class allRecommandations extends Component {
         this.scrollToTop();
     }
 
-    componentDidUpdate() {
-       
-    }
 
     scrollToTop() {
         this.el.scrollIntoView();
     }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    toggleVisibility(){
+      this.scrollToTop();
+      this.setState({ visible: !this.state.visible  })
+    } 
+
+    VisibilityLeft(){
+      this.scrollToTop();
+      this.setState({ visibleLeft: !this.state.visibleLeft  })
+    } 
     
     toggleHidden() {
       this.setState({ visible: false });
@@ -108,13 +112,13 @@ class allRecommandations extends Component {
             <div className="headerPage">
               <span
                className="buttonPush"
-               onClick={this.toggleVisibility}>
+               onClick={this.toggleVisibility.bind(this)}>
                <ButtonPusher />
                </span>
               
               <span
                className="buttonPushMobile"
-               onClick={this.VisibilityLeft}>
+                onClick={this.VisibilityLeft.bind(this)}>
                <FaList />
                </span>
               <HeaderPage />
@@ -133,6 +137,7 @@ class allRecommandations extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                 <ContentMenuRight />
               </Sidebar>
 
@@ -145,6 +150,7 @@ class allRecommandations extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                <ContentMenuMobile />
               </Sidebar>
               

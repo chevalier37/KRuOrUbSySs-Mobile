@@ -77,7 +77,12 @@ class ListeNotifications extends Component {
 	        				  "visibleTitre" : "none"
 	        				}>
 				  			<Link to={'/profil/' + this.props.message.from_id}>
-				  			Nouveau message de {this.props.message.from_name} 
+				  			Nouveau message de 
+								<div className={this.props.message.gender=="fille" ?
+		        				    "filleNotif" : "garconNotif"
+		        				}>
+				  					{this.props.message.from_name} 
+				  				</div>		
 				  			</Link>
 				  			<div className="iconNotif">
 				  				<FaComments />
@@ -183,7 +188,7 @@ class ListeNotifications extends Component {
 								</Button>
 
 								<div className={this.props.message.type=='chat' ? "visiblebutton" : "none"}>
-									<Link to={'/Chat/' + this.props.message.from_id}>
+									<Link to={'/ChatMobile/' + this.props.message.from_id}>
 										<Button
 				         					size="mini"
 											color='green'

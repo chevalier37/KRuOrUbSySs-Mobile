@@ -10,24 +10,34 @@ import { Route, Redirect } from 'react-router';
 import HeaderPage from '../component/HeaderPage.js';
 import ContentMenuRight from '../component/ContentMenuRight.js';
 import ButtonPusher from '../component/ButtonPusher.js';
-import ContentMenuLeft from '../component/ContentMenuLeft.js';
+import ContentMenuMobile from '../component/ContentMenuMobile.js';
+import MainContent from '../component/MainContent.js';
+import FooterPage from '../component/FooterPage.js';
 
-
+import FaList from 'react-icons/lib/fa/list'; 
 
 class commandeEffectuer extends Component {
 
     state = { visible: false }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    toggleHidden = () => this.setState({ visible: false })
+    toggleVisibility(){
+      this.scrollToTop();
+      this.setState({ visible: !this.state.visible  })
+    } 
+
+    VisibilityLeft(){
+      this.scrollToTop();
+      this.setState({ visibleLeft: !this.state.visibleLeft  })
+    } 
 
     componentDidMount() {
         this.scrollToTop();
     }
 
-    componentDidUpdate() {
-        
-    }
+    toggleHidden() {
+      this.setState({ visible: false });
+      this.setState({ visibleLeft: false });
+    } 
 
     scrollToTop() {
         this.el.scrollIntoView();
@@ -42,17 +52,22 @@ class commandeEffectuer extends Component {
     return (
       <div className="container">
       <div ref={el => { this.el = el; }} ></div>
-        <header>
+       <header>
           <div className="containerSupHeader">
             <div className="containerHeader">
             <div className="headerPage">
-              <HeaderPage />
               <span
                className="buttonPush"
-               onClick={this.toggleVisibility}>
-
+               onClick={this.toggleVisibility.bind(this)}>
                <ButtonPusher />
                </span>
+              
+              <span
+               className="buttonPushMobile"
+               onClick={this.VisibilityLeft.bind(this)}>
+               <FaList />
+               </span>
+              <HeaderPage />
             </div>
             </div>
           </div>
@@ -60,20 +75,35 @@ class commandeEffectuer extends Component {
        
         <Sidebar.Pushable >
               <Sidebar
-                animation='overlay'
-                className="ListRight"
-                direction='right'
-                visible={visible}
-                icon='labeled'
-                vertical
-                className="SidebarUI"
-              >
-                <ContentMenuRight />
-              </Sidebar>
+                  animation='overlay'
+                  className="ListRight"
+                  direction='right'
+                  visible={visible}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                  
+                >
+                <div ref={el => { this.el = el; }} ></div>
+                  <ContentMenuRight />
+                </Sidebar>
+
+                 <Sidebar
+                  animation='overlay'
+                  className="ListRight"
+                  direction='left'
+                  visible={this.state.visibleLeft}
+                  icon='labeled'
+                  vertical
+                  className="SidebarUI"
+                >
+                <div ref={el => { this.el = el; }} ></div>
+                 <ContentMenuMobile />
+                </Sidebar>
               
               <Sidebar.Pusher>
         
-                <div className="containerSite" onClick={this.toggleHidden}>
+                <div className="containerSite" onClick={this.toggleHidden.bind(this)}>
                   <div className="containerIMG">
                   <div className="MainContent">
                     <Segment className="MainContent">
@@ -88,12 +118,12 @@ class commandeEffectuer extends Component {
                       </p>
                        <p></p>
                     </Segment>
-                  </div>
-                  <ContentMenuLeft />                     
+                  </div>             
                   </div> 
                 </div>
               </Sidebar.Pusher>
         </Sidebar.Pushable>
+        <FooterPage />
       </div>
     );
   }

@@ -238,11 +238,13 @@ class ResultatsConseillerContent extends Component {
 					</Link>
 				</Table.Cell>
               	<Table.Cell>
-	              	<Link to={'/ChatMobile/' + conseiller.user_id}>
-		              	<div className="display-linebreak textConseillere">
-		              		{conseiller.presentation}
-		              	</div>
-					</Link>
+	              	<div className="ok">
+		              	<Link to={'/ChatMobile/' + conseiller.user_id}>
+			              	<div className="display-linebreak textConseillere">
+			              		{conseiller.presentation}
+			              	</div>
+						</Link>
+					</div>
               	</Table.Cell>
               
 			</Table.Row>
@@ -261,7 +263,7 @@ class ResultatsConseillerContent extends Component {
 	    	<div className="MainContent">
 				<Segment className="MainContent">
 					<Header>
-					Resultat de la recherche : {this.props.titre} 
+					Conseillers disponible : {this.props.titre} 
 					</Header>
 					<Divider />
 						
@@ -277,12 +279,9 @@ class ResultatsConseillerContent extends Component {
 				    Il n'y a pas encore de conseillers inscrit pour le thème "{this.props.titre} "
 				    </div>
 				    
-
-
-
 	    		<Header>
-					Tous les conseillers disponibles :
-					</Header>
+					Les autres conseillers disponibles :
+				</Header>
 					<Divider />
 						
 				     <Table sortable celled fixed selectable color="red" >
@@ -295,7 +294,6 @@ class ResultatsConseillerContent extends Component {
 			</div>
 	    )
 	  }
-	
 }
 
 export default ResultatsConseillerContent = withTracker(({theme}) => {

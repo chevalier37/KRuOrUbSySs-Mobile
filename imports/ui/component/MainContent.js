@@ -238,41 +238,47 @@ class MainContent extends Component {
 			    	</Header>
 			    </div>
 				<div className={this.state.poster ? '' : "none"}>
+				    <div className="trier">
 				      <Button
 				        size="small"
 				        inverted color="red"
 				        onClick={this.showAll.bind(this)}>
 				        Tous
 				       </Button>
-
+				    </div>
+				    <div className="trier">
 				      <Button
 				        size="small"
 				         inverted color="red"
 				         onClick={this.shawAmour.bind(this)}>
 				         Amour
 				       </Button>
-
+				    </div>
+					<div className="trier">
 				      <Button
 				        size="small" 
 				        inverted color="red"
 				        onClick={this.showConfiance.bind(this)}>
 				        Confiance en soi
 				       </Button>
-
+				    </div>
+				    <div className="trier">   
 				      <Button
 				        size="small"
 				        inverted color="red"
 				        onClick={this.showSexo.bind(this)}>
 				        Sexo
 				       </Button>
-
+				    </div>
+				    <div className="trier">
 				      <Button
 				        size="small"
 				        inverted color="red"
 				        onClick={this.showSante.bind(this)}>
 				        Santé
 				       </Button>
-
+				    </div>
+				    <div className="trier">
 				      <Button
 				        size="small"
 				        inverted color="red"
@@ -280,14 +286,15 @@ class MainContent extends Component {
 				        Scolaire
 				       </Button>
 				    </div>
+				    </div>
 	  			</Segment>
 
-				<div className="espacePub" ></div>
+				{/*<div className="espacePub" ></div>
 			        <AdSense.Google
 			          client='ca-pub-6112176939320267'
 			          slot='3735932470'
 			          style={{ display: 'inline-block',width:'320px', height:'50px'}}
-					/>
+					/>*/}
 
 	  			<div className={this.state.allMessages}>
 	  				{this.renderAllMessages()}

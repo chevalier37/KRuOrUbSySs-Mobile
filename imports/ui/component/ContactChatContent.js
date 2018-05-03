@@ -43,7 +43,7 @@ class ContactChatContent extends Component {
 
 		breaklines(){
 		  let message = this.props.contact.last_message
-		  let shortMessage = message.substring(0, 100);
+		  let shortMessage = message.substring(0, 50);
 		  return shortMessage
 		}
 

@@ -48,7 +48,7 @@ class ButtonPusher extends Component {
       username:'d',
       chat:'',
       pathname:" ",
-      home:false,
+      home:true,
       visible:' '
     };
   }
@@ -82,7 +82,7 @@ class ButtonPusher extends Component {
   	{this.props.chat == 'true' ?
   	this.setState({chat:'chat'}) : ''}
 
-    if(pathname == "Home"){
+    if(pathname == "Home" || pathname == "home"){
       this.setState({
       home: true,
     });
@@ -159,7 +159,7 @@ class ButtonPusher extends Component {
     });
     }
 
-    if(pathname == "profil"){
+    if(pathname == "Profil"){
       this.setState({
       pathname: "Profil",
     });

@@ -34,8 +34,15 @@ class chat extends Component {
         };
     }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible })
-    VisibilityLeft = () => this.setState({ visibleLeft: !this.state.visibleLeft })
+    toggleVisibility(){
+      this.scrollToTop();
+      this.setState({ visible: !this.state.visible  })
+    } 
+
+    VisibilityLeft(){
+      this.scrollToTop();
+      this.setState({ visibleLeft: !this.state.visibleLeft  })
+    } 
     
     toggleHidden() {
       this.setState({ visible: false });
@@ -60,6 +67,14 @@ class chat extends Component {
 
     componentWillReceiveProps(){
          this.setState({update: false})
+    }
+
+    componentDidMount() {
+        this.scrollToTop();
+    }
+
+    scrollToTop() {
+        this.el.scrollIntoView();
     }
       
     render() {
@@ -120,13 +135,13 @@ class chat extends Component {
             <div className="headerPage">
               <span
                className="buttonPush"
-               onClick={this.toggleVisibility}>
+               onClick={this.toggleVisibility.bind(this)}>
                <ButtonPusher />
                </span>
               
               <span
                className="buttonPushMobile"
-               onClick={this.VisibilityLeft}>
+               onClick={this.VisibilityLeft.bind(this)}>
                <FaList />
                </span>
               <HeaderPage />
@@ -145,6 +160,7 @@ class chat extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                 <ContentMenuRight />
               </Sidebar>
 
@@ -157,6 +173,7 @@ class chat extends Component {
                 vertical
                 className="SidebarUI"
               >
+              <div ref={el => { this.el = el; }} ></div>
                <ContentMenuMobile />
               </Sidebar>
               
@@ -165,6 +182,7 @@ class chat extends Component {
                   <div className="containerIMG">
                     <div className="MainContent">     
                       <div className="containerContactChat"  >
+                      <div ref={el => { this.el = el; }} ></div>
                         <ContactChat to_id = {this.props.match.params.id}  />
                       </div>
                     </div>    

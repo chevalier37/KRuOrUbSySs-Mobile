@@ -62,15 +62,19 @@ class ListeDonsContent extends Component {
 				</Link>
 				</Table.Cell>
 	            <Table.Cell>
-	            <Link to={'/ChatMobile/' + dons.to_id}>
-	            {dons.montantTotal}€
-	            </Link>
+		            <div className="ok">
+			            <Link to={'/ChatMobile/' + dons.to_id}>
+			            	{dons.montantTotal}€
+			            </Link>
+		            </div>
 	            </Table.Cell>
 
               	<Table.Cell >
-              	<Link to={'/ChatMobile/' + dons.to_id}>
-              	{dons.message}
-              	</Link>
+              	<div className="ok">
+		              	<Link to={'/ChatMobile/' + dons.to_id}>
+		              		{dons.message}
+		              	</Link>
+	            </div>
               	</Table.Cell>
               
 			</Table.Row>
@@ -92,14 +96,18 @@ class ListeDonsContent extends Component {
 				</Link>
 				</Table.Cell>
               	<Table.Cell>
+              	<div className="ok">
 	              	<Link to={'/ChatMobile/' + dons.from_id}>
 	              	{dons.montantPercu}€
 	              	</Link>
+	            </div>
               	</Table.Cell>
               	<Table.Cell>
+              	 <div className="ok">
 	              	<Link to={'/ChatMobile/' + dons.from_id}>
 	              	{dons.message}
 	              	</Link>
+	            </div>
               	</Table.Cell>
 			</Table.Row>
         );
